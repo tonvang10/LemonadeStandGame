@@ -15,9 +15,24 @@ namespace LemonadeStandGame.cs
             ShowInstructions();
             Player getPlayerName = new Player();
             getPlayerName.GetPlayerName();
+            Weather weather = new Weather();
+            weather.WeatherCondition();
+            weather.ShowWeather();
+            Store purchase = new Store();
+            ShowStorePrices();
+            Day trackDays = new Day();
+            trackDays.TrackDays();
+
 
         }
-
+        public void ShowStorePrices()
+        {
+            Console.WriteLine("Lemons cost .25 each.");
+            Console.WriteLine("Sugar cubes cost .05 each cube.");
+            Console.WriteLine("Ice cubes cost .01 each cube.");
+            Console.WriteLine("A gallon of water costs 1.00 each. 1 gallon makes 20 cups of lemonade");
+            Console.WriteLine("Cups cost .05 each. ");
+        }
         public void DisplayMoney()
         {
             Console.WriteLine("You saved up to $20 dollars to spend on your lemonade stand.");
@@ -30,7 +45,9 @@ namespace LemonadeStandGame.cs
         }
         public void Welcome()
         {
+            Console.ForegroundColor = ConsoleColor.Yellow;
             Console.WriteLine("Welcome to the LEMONADE STAND GAME!\n");
+            Console.ResetColor();
         }
     }
 }

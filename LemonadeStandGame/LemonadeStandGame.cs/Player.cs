@@ -6,11 +6,33 @@ using System.Threading.Tasks;
 
 namespace LemonadeStandGame.cs
 {
-    class Player
+    class Player : Game
     {
+
         public string name;
 
 
+        //while (true)
+        public void PurchaseLemons()
+        {
+            Console.WriteLine("How many lemons would you like to purchase?");
+        }
+        public void PurchaseSugarCubes()
+        {
+            Console.WriteLine("How many sugar cubes would you like to purchase?");
+        }
+        public void PurhcaseIceCubes()
+        {
+            Console.WriteLine("How many ice cubes woul you like to purcahse?");
+        }
+        public void PurchaseGallonsOfWater()
+        {
+            Console.WriteLine("How many gallons of water would you like to purchase?");
+        }
+        public void PurchaseCups()
+        {
+            Console.WriteLine("How many cups would you like to purchase?");
+        }
 
         public void GetPlayerName()
         {

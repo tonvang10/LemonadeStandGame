@@ -6,20 +6,19 @@ using System.Threading.Tasks;
 
 namespace LemonadeStandGame.cs
 {
-    class Day
+    class Day : Weather
     {
-        public string days;
+        //public string days;
 
         public void TrackDays()
         {
-            List<string> days = new List<string>();
-            days.Add("Sunday");
-            days.Add("Monday");
-            days.Add("Tuesday");
-            days.Add("Wednesday");
-            days.Add("Thursday");
-            days.Add("Friday");
-            days.Add("Saturday");
+            int days = 1;
+            while (days < 8)
+            {
+                Console.WriteLine("DAY {0}, good luck!", days);
+                days++;
+            }
+
         }
     }
 }

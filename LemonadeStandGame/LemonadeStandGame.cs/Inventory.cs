@@ -6,11 +6,16 @@ using System.Threading.Tasks;
 
 namespace LemonadeStandGame.cs
 {
-    class Inventory
+    class Inventory : Store
     {
-        public void TrackPlayerMoney()
+        public decimal money = 20.00M;
+
+        public void track()
         {
 
+        }
+        public void TrackPlayerMoney()
+        {
         }
     }
 }

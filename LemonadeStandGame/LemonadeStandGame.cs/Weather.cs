@@ -6,27 +6,20 @@ using System.Threading.Tasks;
 
 namespace LemonadeStandGame.cs
 {
-    class Weather
+    class Weather : Customer
     {
         public string sunny;
         public string cloudy;
         public string rainy;
         public string fair;
+        public string condition;
 
         public void ShowWeather()
-        {
-            Console.WriteLine("The weather condition today is {0}");
+        {   
+            Console.WriteLine("The weather condition today is {0}", condition);
         }
-        //public string RandomWeather()
-        //{
-            //List<string> [] weatherCondition = new List<string>[3];
-            //weatherCondition.sunny();
-            //weatherCondition.cloudy();
-            //weatherCondition.rainy();
-            //weatherCondition.fair();
-            //return weatherCondition;
-
-            
-        //}
-    }
+        public void WeatherCondition()
+        {    
+        }
+  }
 }
