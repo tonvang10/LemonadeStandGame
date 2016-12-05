@@ -14,6 +14,19 @@ namespace LemonadeStandGame.cs
         public decimal gallonsOfWater;
         public decimal cups;
         public decimal cost;
+
+        public void ShowStorePrices()
+        {
+            Console.WriteLine("Lemons cost .25 each.");
+            Console.WriteLine("Sugar cubes cost .05 each cube.");
+            Console.WriteLine("Ice cubes cost .01 each cube.");
+            Console.WriteLine("A gallon of water costs 1.00 each.");
+            Console.WriteLine("Cups cost .05 each. ");
+        }
+        public decimal GetTotalCost()
+        {
+            return lemons + sugarCubes;
+        }
         public void CostOfLemon()
         {
             lemons = .25M;

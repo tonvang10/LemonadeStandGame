@@ -19,7 +19,7 @@ namespace LemonadeStandGame.cs
             Console.WriteLine("The weather condition today is {0}", condition);
         }
         public void WeatherCondition()
-        {    
+        {
         }
   }
 }

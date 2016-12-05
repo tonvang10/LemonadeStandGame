@@ -10,6 +10,10 @@ namespace LemonadeStandGame.cs
     {
         public decimal money = 20.00M;
 
+        public void DisplayMoney()
+        {
+            Console.WriteLine("You saved up to $20 dollars to spend on your lemonade stand.");
+        }
         public void track()
         {
 
