@@ -6,14 +6,14 @@ using System.Threading.Tasks;
 
 namespace LemonadeStandGame.cs
 {
-    class Day : Weather
+    public class Day
     {
         //public string days;
 
         public void TrackDays()
         {
-            int days = 1;
-            while (days < 8)
+            int days = 0;
+            while (days < 1)
             {
                 Console.WriteLine("DAY {0}, good luck!", days);
                 days++;

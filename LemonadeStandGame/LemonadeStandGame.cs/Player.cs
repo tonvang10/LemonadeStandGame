@@ -6,39 +6,33 @@ using System.Threading.Tasks;
 
 namespace LemonadeStandGame.cs
 {
-    class Player : Game
+    public class Player : Store
     {
-
         public string name;
+        public decimal userInput;
+        Store store = new Store();
 
-
-        //while (true)
-        public void PurchaseLemons()
+        public void BuyIngridients()
         {
-            Console.WriteLine("How many lemons would you like to purchase?");
-        }
-        public void PurchaseSugarCubes()
-        {
-            Console.WriteLine("How many sugar cubes would you like to purchase?");
-        }
-        public void PurhcaseIceCubes()
-        {
-            Console.WriteLine("How many ice cubes woul you like to purcahse?");
-        }
-        public void PurchaseGallonsOfWater()
-        {
-            Console.WriteLine("How many gallons of water would you like to purchase?");
-        }
-        public void PurchaseCups()
-        {
-            Console.WriteLine("How many cups would you like to purchase?");
+            int i = 0;
+            while (i < 1)
+            {
+                store.BuyLemons();
+                store.BuySugarCubes();
+                store.BuyIceCubes();
+                store.BuyGallonsOfWater();
+                store.BuyCups();
+                ++i;
+            }
         }
 
         public void GetPlayerName()
         {
             Console.WriteLine("What is your name?");
             name = Console.ReadLine();
+            Console.ForegroundColor = ConsoleColor.Green;
             Console.WriteLine("Good luck {0}!\n", name);
+            Console.ResetColor();
         }
     }
 }

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace LemonadeStandGame.cs
 {
-    class Weather : Customer
+    public class Weather : Day
     {
         public string sunny;
         public string cloudy;
@@ -16,7 +16,7 @@ namespace LemonadeStandGame.cs
 
         public void ShowWeather()
         {   
-            Console.WriteLine("The weather condition today is {0}", condition);
+            Console.WriteLine("The weather condition today is {0}\n", condition);
         }
         public void WeatherCondition()
         {
