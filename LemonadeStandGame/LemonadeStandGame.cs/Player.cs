@@ -6,26 +6,14 @@ using System.Threading.Tasks;
 
 namespace LemonadeStandGame.cs
 {
-    public class Player : Store
+    class Player : Store
     {
-        public string name;
-        public decimal userInput;
-        Store store = new Store();
+        string name;
 
-        public void BuyIngridients()
+       public Player()
         {
-            int i = 0;
-            while (i < 1)
-            {
-                store.BuyLemons();
-                store.BuySugarCubes();
-                store.BuyIceCubes();
-                store.BuyGallonsOfWater();
-                store.BuyCups();
-                ++i;
-            }
-        }
 
+        }
         public void GetPlayerName()
         {
             Console.WriteLine("What is your name?");

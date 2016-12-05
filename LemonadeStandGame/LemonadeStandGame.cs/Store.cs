@@ -6,32 +6,34 @@ using System.Threading.Tasks;
 
 namespace LemonadeStandGame.cs
 {
-    public class Store : Inventory
+    class Store : Inventory
     {
-        public decimal lemons = .25M;
-        public decimal sugarCubes = .05M;
-        public decimal iceCubes = .01M;
-        public decimal gallonsOfWater = 1.00M;
-        public decimal cups = .05M;
-        public decimal lemonsBought;
-        public decimal sugarCubesBought;
-        public decimal iceCubesBought;
-        public decimal gallonsOfWaterBought;
-        public decimal cupsBought;
-        public decimal balanceOfMoney;
-        public decimal remainingBalanceOfMoney;
+        decimal lemons = .25M;
+        decimal sugarCubes = .05M;
+        decimal iceCubes = .01M;
+        decimal gallonsOfWater = 1.00M;
+        decimal cups = .05M;
+        decimal lemonsBought;
+        decimal sugarCubesBought;
+        decimal iceCubesBought;
+        decimal gallonsOfWaterBought;
+        decimal cupsBought;
 
+        public Store()
+        {
+
+        }
         public void BuyLemons()
         {
             Console.WriteLine("How many lemons would you like to purchase?");
             decimal lemonsBought = decimal.Parse(Console.ReadLine());
-            balanceOfMoney = money - (lemonsBought * lemons);
+            balanceOfMoney = GetMoney() - (lemonsBought * lemons);
             if (balanceOfMoney < 0)
             {
-                Console.WriteLine("Oops, you don't have enough money.");
+                Console.WriteLine("Oops, you don't have enough money.\n");
                 BuyLemons();
             }
-            Console.WriteLine("You have {0} left to spend.", balanceOfMoney);
+            Console.WriteLine("You have {0} left to spend.\n", balanceOfMoney);
         }
         public void BuySugarCubes()
         {
@@ -40,10 +42,10 @@ namespace LemonadeStandGame.cs
             balanceOfMoney = balanceOfMoney - (sugarCubesBought * sugarCubes);
             if (balanceOfMoney < 0)
             {
-                Console.WriteLine("Oops, you don't have enough money.");
+                Console.WriteLine("Oops, you don't have enough money.\n");
                 BuySugarCubes();
             }
-            Console.WriteLine("You have {0} left to spend.", balanceOfMoney);
+            Console.WriteLine("You have {0} left to spend.\n", balanceOfMoney);
         }
         public void BuyIceCubes()
         {
@@ -52,10 +54,10 @@ namespace LemonadeStandGame.cs
             balanceOfMoney = balanceOfMoney - (iceCubesBought * iceCubes);
             if (balanceOfMoney < 0)
             {
-                Console.WriteLine("Oops, you don't have enough money.");
+                Console.WriteLine("Oops, you don't have enough money.\n");
                 BuyIceCubes();
             }
-            Console.WriteLine("You have {0} left to spend.", balanceOfMoney);
+            Console.WriteLine("You have {0} left to spend\n.", balanceOfMoney);
         }
         public void BuyGallonsOfWater()
         {
@@ -64,10 +66,10 @@ namespace LemonadeStandGame.cs
             balanceOfMoney = balanceOfMoney - (gallonsOfWaterBought * gallonsOfWater);
             if (balanceOfMoney < 0)
             {
-                Console.WriteLine("Oops, you don't have enough money.");
+                Console.WriteLine("Oops, you don't have enough money.\n");
                 BuyGallonsOfWater();
             }
-            Console.WriteLine("You have {0} left to spend.", balanceOfMoney);
+            Console.WriteLine("You have {0} left to spend.\n", balanceOfMoney);
         }
         public void BuyCups()
         {
@@ -76,12 +78,24 @@ namespace LemonadeStandGame.cs
             remainingBalanceOfMoney = balanceOfMoney - (cupsBought * cups);
             if (balanceOfMoney < 0)
             {
-                Console.WriteLine("Oops, you don't have enough money.");
+                Console.WriteLine("Oops, you don't have enough money.\n");
                 BuyCups();
             }
-            Console.WriteLine("You have {0} left. Let's go make lemonade!", remainingBalanceOfMoney);
+            Console.WriteLine("You have {0} left. Let's go make lemonade!\n", remainingBalanceOfMoney);
         }
-
+        public void BuyIngridients()
+        {
+            int i = 0;
+            while (i < 1)
+            {
+                BuyLemons();
+                BuySugarCubes();
+                BuyIceCubes();
+                BuyGallonsOfWater();
+                BuyCups();
+                ++i;
+            }
+        }
         public void GoToStore()
         {
             Console.WriteLine("Let's go to the store.\n");

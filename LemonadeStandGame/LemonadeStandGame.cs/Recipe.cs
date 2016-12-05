@@ -6,12 +6,16 @@ using System.Threading.Tasks;
 
 namespace LemonadeStandGame.cs
 {
-    public class Recipe : Customer
+    class Recipe : Customer
     {
-        public double lemonsUsed;
-        public double sugarUsed;
-        public double iceused;
-        public double gallonsused;
+        double lemonsUsed;
+        double sugarUsed;
+        double iceused;
+        double gallonsused;
         
+        public Recipe()
+        {
+
+        }
     }
 }

@@ -6,15 +6,9 @@ using System.Threading.Tasks;
 
 namespace LemonadeStandGame.cs
 {
-    public class Customer : Weather
+    class Customer : Weather
     {
-        public int numberOfCustomers;
-
-        public void Customers()
-        {
-            numberOfCustomers = 100;
-        }
-        public void BuyLemonade()
+        public Customer()
         {
 
         }

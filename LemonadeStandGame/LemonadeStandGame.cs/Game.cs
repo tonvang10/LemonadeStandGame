@@ -6,29 +6,31 @@ using System.Threading.Tasks;
 
 namespace LemonadeStandGame.cs
 {
-    public class Game : Player
+    class Game : Player
     {
-        Player player = new Player();
-        Store store = new Store();
-        Weather weather = new Weather();
-        Inventory inventory = new Inventory();
+        public Player player;
+        public Weather weather;
+        public Store store;
+        public Inventory inventory;
 
+        public Game()
+        {
+            player = new Player();
+            weather = new Weather();
+            store = new Store();
+            inventory = new Inventory();
+        }
         public void StartGame()
         {
             Welcome();
-            ShowInstructions();
+            ShowInstructions();          
             player.GetPlayerName();          
-            weather.WeatherCondition();
             GetStartingBalnce();
-            weather.ShowWeather();    
+            weather.ShowWeatherCondition();
             store.GoToStore();
             store.ShowStorePrices();
-            player.BuyIngridients();   
-
-        }
-        public decimal GetMoney()
-        {
-            return money;
+            player.BuyIngridients();
+            inventory.DisplayLemons();   
         }
            public void GetStartingBalnce()
         {

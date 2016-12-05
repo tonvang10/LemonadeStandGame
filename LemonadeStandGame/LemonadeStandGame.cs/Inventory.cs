@@ -6,15 +6,25 @@ using System.Threading.Tasks;
 
 namespace LemonadeStandGame.cs
 {
-    public class Inventory : Recipe
+    class Inventory : Recipe
     {
-        public decimal money = 20.00M;
+        public decimal balanceOfMoney;
+        public decimal remainingBalanceOfMoney;
+        decimal lemonsBought;
+        decimal money = 20.00M;
 
-        public void track()
+        public Inventory()
         {
+
         }
-        public void TrackPlayerMoney()
+        public void DisplayLemons()
         {
+            Console.WriteLine("\nYou have {0} lemons. How many do you want to use?", lemonsBought);
+            Console.ReadLine();
+        }
+        public decimal GetMoney()
+        {
+            return money;
         }
     }
 }

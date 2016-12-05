@@ -6,10 +6,12 @@ using System.Threading.Tasks;
 
 namespace LemonadeStandGame.cs
 {
-    public class Day
+    class Day
     {
-        //public string days;
+        public Day()
+        {
 
+        }
         public void TrackDays()
         {
             int days = 0;
