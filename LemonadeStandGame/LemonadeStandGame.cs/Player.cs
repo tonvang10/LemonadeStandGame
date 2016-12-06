@@ -6,13 +6,37 @@ using System.Threading.Tasks;
 
 namespace LemonadeStandGame.cs
 {
-    class Player : Store
+    class Player
     {
+        public Recipe recipe;
+        public Store store;
         string name;
 
        public Player()
         {
-
+            recipe = new Recipe();
+            store = new Store();
+        }
+        public void MakeLemonade()
+        {
+            recipe.UseLemons();
+            recipe.UseSugarCubes();
+            recipe.UseIceCubes();
+            recipe.UseGallonOfWater();
+            recipe.UseCup();
+        }
+        public void BuyIngridients()
+        {
+            int i = 0;
+            while (i < 1)
+            {
+                store.BuyLemons();
+                store.BuySugarCubes();
+                store.BuyIceCubes();
+                store.BuyGallonsOfWater();
+                store.BuyCups();
+                ++i;
+            }
         }
         public void GetPlayerName()
         {

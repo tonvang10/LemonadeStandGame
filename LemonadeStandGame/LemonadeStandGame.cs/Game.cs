@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace LemonadeStandGame.cs
 {
-    class Game : Player
+    class Game
     {
         public Player player;
         public Weather weather;
@@ -30,7 +30,8 @@ namespace LemonadeStandGame.cs
             store.GoToStore();
             store.ShowStorePrices();
             player.BuyIngridients();
-            inventory.DisplayLemons();   
+            inventory.DisplaySupplies();
+            player.MakeLemonade();   
         }
            public void GetStartingBalnce()
         {

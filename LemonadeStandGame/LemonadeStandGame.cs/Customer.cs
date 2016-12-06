@@ -6,12 +6,8 @@ using System.Threading.Tasks;
 
 namespace LemonadeStandGame.cs
 {
-    class Customer : Weather
+    class Customer
     {
-        public Customer()
-        {
-
-        }
         
     }
 }

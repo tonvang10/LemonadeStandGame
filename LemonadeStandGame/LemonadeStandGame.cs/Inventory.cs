@@ -6,21 +6,31 @@ using System.Threading.Tasks;
 
 namespace LemonadeStandGame.cs
 {
-    class Inventory : Recipe
+    class Inventory 
     {
+        decimal money = 20.00M;
+        public decimal lemonStock;
+        public decimal sugarCubeStock;
+        public decimal iceCubeStock;
+        public decimal gallonOfWaterStock;
+        public decimal cupStock;
         public decimal balanceOfMoney;
         public decimal remainingBalanceOfMoney;
-        decimal lemonsBought;
-        decimal money = 20.00M;
-
+  
         public Inventory()
         {
-
         }
-        public void DisplayLemons()
+        public decimal GetLemonStock()
+        { 
+            return lemonStock;
+        }
+        public void DisplaySupplies()
         {
-            Console.WriteLine("\nYou have {0} lemons. How many do you want to use?", lemonsBought);
-            Console.ReadLine();
+            Console.WriteLine("You have {0} lemons.", lemonStock);
+            Console.WriteLine("You have {0} sugar cubes.", sugarCubeStock);
+            Console.WriteLine("You Have {0} ice cubes.", iceCubeStock);
+            Console.WriteLine("You have {0} gallons of water.", gallonOfWaterStock);
+            Console.WriteLine("You have {0} cups.", cupStock);
         }
         public decimal GetMoney()
         {

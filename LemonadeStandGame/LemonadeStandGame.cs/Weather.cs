@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace LemonadeStandGame.cs
 {
-    class Weather : Day
+    class Weather
     {
         string sunny;
         string cloudy;
@@ -28,5 +28,6 @@ namespace LemonadeStandGame.cs
             Random rnd = new Random();
             Console.WriteLine("The weather condition today is {0}\n", (condition[rnd.Next(0, 3)]));
         }
+        //switch statement for weather with <>=- number of customers
     }
 }
