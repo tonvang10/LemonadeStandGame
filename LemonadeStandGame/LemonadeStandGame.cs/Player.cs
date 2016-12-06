@@ -24,19 +24,15 @@ namespace LemonadeStandGame.cs
             recipe.UseIceCubes();
             recipe.UseGallonOfWater();
             recipe.UseCup();
+            Console.WriteLine("Good luck!");
         }
         public void BuyIngridients()
         {
-            int i = 0;
-            while (i < 1)
-            {
-                store.BuyLemons();
-                store.BuySugarCubes();
-                store.BuyIceCubes();
-                store.BuyGallonsOfWater();
-                store.BuyCups();
-                ++i;
-            }
+            store.BuyLemons();
+            store.BuySugarCubes();
+            store.BuyIceCubes();
+            store.BuyGallonsOfWater();
+            store.BuyCups();
         }
         public void GetPlayerName()
         {

@@ -48,6 +48,8 @@
     <Compile Include="Game.cs" />
     <Compile Include="Inventory.cs" />
     <Compile Include="IUser.cs" />
+    <Compile Include="Lemon.cs" />
+    <Compile Include="Money.cs" />
     <Compile Include="Player.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

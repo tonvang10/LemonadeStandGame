@@ -6,35 +6,31 @@ using System.Threading.Tasks;
 
 namespace LemonadeStandGame.cs
 {
-    class Inventory 
+    class Inventory : Store 
     {
-        decimal money = 20.00M;
-        public decimal lemonStock;
-        public decimal sugarCubeStock;
-        public decimal iceCubeStock;
-        public decimal gallonOfWaterStock;
-        public decimal cupStock;
-        public decimal balanceOfMoney;
-        public decimal remainingBalanceOfMoney;
-  
+        public Store store;
+
         public Inventory()
         {
-        }
-        public decimal GetLemonStock()
-        { 
-            return lemonStock;
+            store = new Store();
         }
         public void DisplaySupplies()
         {
-            Console.WriteLine("You have {0} lemons.", lemonStock);
-            Console.WriteLine("You have {0} sugar cubes.", sugarCubeStock);
-            Console.WriteLine("You Have {0} ice cubes.", iceCubeStock);
-            Console.WriteLine("You have {0} gallons of water.", gallonOfWaterStock);
-            Console.WriteLine("You have {0} cups.", cupStock);
-        }
-        public decimal GetMoney()
-        {
-            return money;
+            List<decimal> lemon = new List<decimal>();
+            lemon.Add(store.GetLemons());
+            Console.WriteLine("You have {0} lemons.", lemon);
+            List<decimal> sugarCube = new List<decimal>();
+            sugarCube.Add(store.GetSugarCubes());
+            Console.WriteLine("You have {0} sugar cubes.", sugarCube);
+            List<decimal> iceCube = new List<decimal>();
+            iceCube.Add(store.GetIceCubes());
+            Console.WriteLine("You have {0} ice cubes.", iceCube);
+            List<decimal> gallonOfWater = new List<decimal>();
+            gallonOfWater.Add(store.GetGallonsOfWater());
+            Console.WriteLine("You have {0} gallons of water.", gallonOfWater);
+            List<decimal> cup = new List<decimal>();
+            cup.Add(store.GetCups());
+            Console.WriteLine("You have {0} cups.\n", cup);
         }
     }
 }

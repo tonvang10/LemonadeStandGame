@@ -8,26 +8,37 @@ namespace LemonadeStandGame.cs
 {
     class Weather
     {
-        string sunny;
-        string cloudy;
-        string rainy;
-        string fair;
-        string condition;
+        decimal randomWeather;
 
         public Weather()
-        {
-
+        { 
         }
-        public void ShowWeatherCondition()
+        public void PickWeatherCondition()
         {
-            string[] condition = new string[4];
-            condition[0] = "85 degees and sunny";
-            condition[1] = "74 degrees and cloudy";
-            condition[2] = "70 degrees and rainy";
-            condition[3] = "77 degrees and fair";
             Random rnd = new Random();
-            Console.WriteLine("The weather condition today is {0}\n", (condition[rnd.Next(0, 3)]));
+            string[] condition = new string[4];
+            condition[0] = "92";
+            condition[1] = "85";
+            condition[2] = "71";
+            condition[3] = "77";
+            condition[4] = "68";
+            condition[5] = "83";
+            condition[6] = "69";
+            condition[7] = "75";
+            Console.WriteLine("The weather temperature today is {0}.\n", (condition[rnd.Next(0, 7)]));
+            randomWeather = decimal.Parse(Console.ReadLine());
+            if (randomWeather > 90)
+            {
+            }
+            else if (randomWeather > 80 && randomWeather < 90)
+            {
+            }
+            else if (randomWeather > 70 && randomWeather < 80)
+            {
+            }
+            else if (randomWeather > 60 && randomWeather < 70)
+            {
+            }
         }
-        //switch statement for weather with <>=- number of customers
     }
 }

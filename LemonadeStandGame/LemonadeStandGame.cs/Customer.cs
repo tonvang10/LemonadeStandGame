@@ -8,6 +8,18 @@ namespace LemonadeStandGame.cs
 {
     class Customer
     {
-        
+           public Customer()
+        {
+
+        }
+        public void BuyLemonade()
+        {
+            //int i = 0;
+            //while (i < 1)
+            //{
+
+            //}
+            //++i;
+        }
     }
 }

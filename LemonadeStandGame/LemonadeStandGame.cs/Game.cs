@@ -26,7 +26,7 @@ namespace LemonadeStandGame.cs
             ShowInstructions();          
             player.GetPlayerName();          
             GetStartingBalnce();
-            weather.ShowWeatherCondition();
+            weather.PickWeatherCondition();
             store.GoToStore();
             store.ShowStorePrices();
             player.BuyIngridients();
@@ -41,7 +41,7 @@ namespace LemonadeStandGame.cs
         {
             Console.WriteLine("There are no rules to the game, however, there are intsructions. You buy a certain amount of supplies with");
             Console.WriteLine("the amount of money you have. Make a recipe for your lemonade and sell lemonade. Try to make as much");
-            Console.WriteLine("profit as you can, in 7 days. REMEMBER to keep track of the weather! ENJOY!\n");
+            Console.WriteLine("profit as you can, in 7 days. REMEMBER to keep track of the weather temperature! ENJOY!\n");
         }
         public void Welcome()
         {
