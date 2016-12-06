@@ -8,6 +8,7 @@ namespace LemonadeStandGame.cs
 {
     class Player
     {
+        public Customer customer;
         public Recipe recipe;
         public Store store;
         string name;
@@ -16,6 +17,7 @@ namespace LemonadeStandGame.cs
         {
             recipe = new Recipe();
             store = new Store();
+            customer = new Customer();
         }
         public void MakeLemonade()
         {

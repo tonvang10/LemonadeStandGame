@@ -12,6 +12,7 @@ namespace LemonadeStandGame.cs
         public Weather weather;
         public Store store;
         public Inventory inventory;
+  
 
         public Game()
         {
@@ -31,7 +32,7 @@ namespace LemonadeStandGame.cs
             store.ShowStorePrices();
             player.BuyIngridients();
             inventory.DisplaySupplies();
-            player.MakeLemonade();   
+            player.MakeLemonade();
         }
            public void GetStartingBalnce()
         {

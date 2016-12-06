@@ -8,10 +8,5 @@ namespace LemonadeStandGame.cs
 {
     class Lemon
     {
-        public decimal lemons;
-        public Lemon()
-        {
-
-        }
     }
 }

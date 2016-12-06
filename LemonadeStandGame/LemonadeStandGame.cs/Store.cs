@@ -50,70 +50,81 @@ namespace LemonadeStandGame.cs
         {
             return remainingBalanceOfMoney;
         }
-        public decimal BuyLemons()
+        public bool BuyLemons()
         {
             Console.WriteLine("How many lemons would you like to purchase?");
             lemonPurchased = decimal.Parse(Console.ReadLine());
             balanceOfMoney = money.GetMoney() - (lemonPurchased * lemonCost);
             Console.WriteLine("You have {0} left to spend.\n", balanceOfMoney);
-            if (balanceOfMoney < 0)
+            if (balanceOfMoney > 0)
+            {
+                Console.WriteLine("You have {0} left to spend.\n", balanceOfMoney);
+            }
+            else
             {
                 Console.WriteLine("Oops, you don't have enough money.\n");
-                BuyLemons();
             }
-            return lemonPurchased;
+            return true;
         }
-        public decimal BuySugarCubes()
+        public bool BuySugarCubes()
         {
             Console.WriteLine("How many sugar cubes would you like to purchase?");
             sugarCubePurchased = decimal.Parse(Console.ReadLine());
             balanceOfMoney = balanceOfMoney - (sugarCubePurchased * sugarCubeCost);
-            if (balanceOfMoney < 0)
+            if (balanceOfMoney > 0)
+            {
+                Console.WriteLine("You have {0} left to spend.\n", balanceOfMoney);
+            }
+            else  
             {
                 Console.WriteLine("Oops, you don't have enough money.\n");
-                BuySugarCubes();
             }
-            Console.WriteLine("You have {0} left to spend.\n", balanceOfMoney);
-            return sugarCubePurchased;
+            return true;
         }
-        public decimal BuyIceCubes()
+        public bool BuyIceCubes()
         {
             Console.WriteLine("How many ice cubes would you like to purcahse?");
             iceCubePurchased = decimal.Parse(Console.ReadLine());
             balanceOfMoney = balanceOfMoney - (iceCubePurchased * iceCubeCost);
-            if (balanceOfMoney < 0)
+            if (balanceOfMoney > 0)
+            {
+                Console.WriteLine("You have {0} left to spend.\n", balanceOfMoney);
+            }
+            else
             {
                 Console.WriteLine("Oops, you don't have enough money.\n");
-                BuyIceCubes();
             }
-            Console.WriteLine("You have {0} left to spend.\n", balanceOfMoney);
-            return iceCubePurchased;
+            return true;
         }
-        public decimal BuyGallonsOfWater()
+        public bool BuyGallonsOfWater()
         {
             Console.WriteLine("How many gallons of water would you like to purchase?");
             gallonOfWaterPurchased = decimal.Parse(Console.ReadLine());
             balanceOfMoney = balanceOfMoney - (gallonOfWaterPurchased * gallonOfWaterCost);
-            if (balanceOfMoney < 0)
+            if (balanceOfMoney > 0)
+            {
+                Console.WriteLine("You have {0} left to spend.\n", balanceOfMoney);
+            }
+            else
             {
                 Console.WriteLine("Oops, you don't have enough money.\n");
-                BuyGallonsOfWater();
             }
-            Console.WriteLine("You have {0} left to spend.\n", balanceOfMoney);
-            return gallonOfWaterPurchased;
+            return true;
         }
-        public decimal BuyCups()
+        public bool BuyCups()
         {
             Console.WriteLine("How many cups would you like to purchase?");
             cupPurchased = decimal.Parse(Console.ReadLine());
             remainingBalanceOfMoney = balanceOfMoney - (cupPurchased * cupCost);
-            if (balanceOfMoney < 0)
+            if (balanceOfMoney > 0)
+            {
+                Console.WriteLine("You have {0} left to spend.\n", balanceOfMoney);
+            }
+            else
             {
                 Console.WriteLine("Oops, you don't have enough money.\n");
-                BuyCups();
             }
-            Console.WriteLine("\nYou have {0} left. Let's go make lemonade!\n", remainingBalanceOfMoney);
-            return cupPurchased;
+            return true;
         }
         public void GoToStore()
         {
