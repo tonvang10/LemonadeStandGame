@@ -26,7 +26,7 @@ namespace LemonadeStandGame.cs
             recipe.UseIceCubes();
             recipe.UseGallonOfWater();
             recipe.UseCup();
-            Console.WriteLine("Good luck!");
+            Console.WriteLine("Good luck!\n");
         }
         public void BuyIngridients()
         {

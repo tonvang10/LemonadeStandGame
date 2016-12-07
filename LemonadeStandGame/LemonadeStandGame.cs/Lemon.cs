@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace LemonadeStandGame.cs
 {
-    class Lemon
+    class Lemon : Store
     {
+        public List<Lemon> lemon = new List<Lemon>();
     }
 }

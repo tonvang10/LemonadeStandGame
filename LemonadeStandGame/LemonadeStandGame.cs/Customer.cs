@@ -8,14 +8,13 @@ namespace LemonadeStandGame.cs
 {
     class Customer
     {
-           public Customer()
+        List<string> customers = new List<string>();
+        public Customer()
         {
 
         }
         public void DisplayCustomers()
         {
-            List<string> customers = new List<string>();
-
             foreach (string customernumber in customers)
             {
                 Console.WriteLine(customernumber);

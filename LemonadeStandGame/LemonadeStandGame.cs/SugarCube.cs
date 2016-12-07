@@ -6,11 +6,8 @@ using System.Threading.Tasks;
 
 namespace LemonadeStandGame.cs
 {
-    class Day
+    class SugarCube : Store
     {
-        public Day()
-        {
-
-        }
+        public List<decimal> SugarCubes = new List<decimal>();
     }
 }

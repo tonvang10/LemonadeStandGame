@@ -25,25 +25,24 @@ namespace LemonadeStandGame.cs
         public void StartGame()
         {
             Welcome();
-            ShowInstructions();          
-            player.GetPlayerName();          
+            ShowInstructions();
+            player.GetPlayerName();
             GetStartingBalnce();
-            StartGameLoop();
-        }
-        public void StartGameLoop()
-        {
             int days = 1;
-            while (days < 8)
-            {
-                Console.WriteLine("DAY {0}, good luck!\n", days);
-                weather.PickWeatherCondition();
-                store.GoToStore();
-                store.ShowStorePrices();
-                player.BuyIngridients();
-                inventory.DisplaySupplies();
-                player.MakeLemonade();
-                days++;
-            }
+                while (days < 8)
+                {
+                    Console.ForegroundColor = ConsoleColor.Red;
+                    Console.WriteLine("DAY {0}", days);
+                    Console.ResetColor();
+                    Console.WriteLine("GOOD LUCK!\n");
+                    weather.PickWeatherCondition();
+                    store.GoToStore();
+                    store.ShowStorePrices();
+                    player.BuyIngridients();
+                    inventory.DisplaySupplies();
+                    player.MakeLemonade();
+                    days++;
+                }
         }
         public void GetStartingBalnce()
         {
