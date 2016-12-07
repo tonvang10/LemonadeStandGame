@@ -9,18 +9,19 @@ namespace LemonadeStandGame.cs
     class Store
     {
         public Money money;
-        decimal lemonCost = .25M;
-        decimal sugarCubeCost = .05M;
-        decimal iceCubeCost = .01M;
-        decimal gallonOfWaterCost = 1.00M;
-        decimal cupCost = .05M;
         public decimal lemonPurchased;
         public decimal sugarCubePurchased;
         public decimal iceCubePurchased;
         public decimal gallonOfWaterPurchased;
         public decimal cupPurchased;
-        public decimal balanceOfMoney;
-        public decimal remainingBalanceOfMoney;
+        decimal lemonCost = .25M;
+        decimal sugarCubeCost = .05M;
+        decimal iceCubeCost = .01M;
+        decimal gallonOfWaterCost = 1.00M;
+        decimal cupCost = .05M;
+        decimal balanceOfMoney;
+        decimal remainingBalanceOfMoney;
+
 
         public Store()
         {
@@ -28,22 +29,27 @@ namespace LemonadeStandGame.cs
         }
         public decimal GetCups()
         {
+            Console.WriteLine("You have {0} cups.\n", cupPurchased);
             return cupPurchased;
         }
         public decimal GetGallonsOfWater()
         {
+            Console.WriteLine("You have {0} gallons of water.", gallonOfWaterPurchased);
             return gallonOfWaterPurchased;
         }
         public decimal GetIceCubes()
         {
+            Console.WriteLine("You have {0} ice cubes.", iceCubePurchased);
             return iceCubePurchased;
         }
         public decimal GetSugarCubes()
         {
+            Console.WriteLine("You have {0} sugar cubes.", sugarCubePurchased);
             return sugarCubePurchased;
         }
         public decimal GetLemons()
         {
+            Console.WriteLine("You have {0} lemons.", lemonPurchased);
             return lemonPurchased;
         }
         public decimal GetBalanceOfMoney()
@@ -55,7 +61,6 @@ namespace LemonadeStandGame.cs
             Console.WriteLine("How many lemons would you like to purchase?");
             lemonPurchased = decimal.Parse(Console.ReadLine());
             balanceOfMoney = money.GetMoney() - (lemonPurchased * lemonCost);
-            Console.WriteLine("You have {0} left to spend.\n", balanceOfMoney);
             if (balanceOfMoney > 0)
             {
                 Console.WriteLine("You have {0} left to spend.\n", balanceOfMoney);
@@ -128,7 +133,7 @@ namespace LemonadeStandGame.cs
         }
         public void GoToStore()
         {
-            Console.WriteLine("Let's go to the store.");
+            Console.WriteLine("Let's go to the store.\nPress **ENTER** to enter");
             Console.ReadLine();
         }
         public void ShowStorePrices()

@@ -14,12 +14,6 @@ namespace LemonadeStandGame.cs
         }
         public void TrackDays()
         {
-            int days = 0;
-            while (days < 1)
-            {
-                Console.WriteLine("DAY {0}, good luck!", days);
-                days++;
-            }
 
         }
     }

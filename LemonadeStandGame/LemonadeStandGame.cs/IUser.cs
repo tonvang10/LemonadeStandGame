@@ -8,5 +8,7 @@ namespace LemonadeStandGame.cs
 {
     interface IUser
     {
+        void money();
+        void balance();
     }
 }

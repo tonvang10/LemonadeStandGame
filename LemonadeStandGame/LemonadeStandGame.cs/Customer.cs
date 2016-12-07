@@ -15,38 +15,12 @@ namespace LemonadeStandGame.cs
         public void DisplayCustomers()
         {
             List<string> customers = new List<string>();
-            customers.Add("Customer");
-            customers.Add("Customer");
-            customers.Add("Customer");
-            customers.Add("Customer");
-            customers.Add("Customer");
-            customers.Add("Customer");
-            customers.Add("Customer");
-            customers.Add("Customer");
-            customers.Add("Customer");
-            customers.Add("Customer");
-            customers.Add("Customer");
-            customers.Add("Customer");
-            customers.Add("Customer");
-            customers.Add("Customer");
-            customers.Add("Customer");
-            customers.Add("Customer");
-            customers.Add("Customer");
-            customers.Add("Customer");
-            customers.Add("Customer");
-            customers.Add("Customer");
-            customers.Add("Customer");
-            customers.Add("Customer");
-            customers.Add("Customer");
-            customers.Add("Customer");
-            customers.Add("Customer");
+
             foreach (string customernumber in customers)
             {
                 Console.WriteLine(customernumber);
             }
-        }
-     
-        
+        }   
         public void BuyLemonade()
         {
             //int i = 0;
