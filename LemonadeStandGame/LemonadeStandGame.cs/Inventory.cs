@@ -6,8 +6,13 @@ using System.Threading.Tasks;
 
 namespace LemonadeStandGame.cs
 {
-    class Inventory : Store
+    class Inventory
     {
+        public List<Lemon> lemons = new List<Lemon>();
+        public List<SugarCube> sugarCubes = new List<SugarCube>();
+        public List<IceCube> iceCubes = new List<IceCube>();
+        public List<GallonOfWater> gallonsOfWater = new List<GallonOfWater>();
+        public List<Cup> cups = new List<Cup>();
         public Inventory()
         { 
         }

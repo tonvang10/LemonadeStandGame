@@ -8,6 +8,10 @@ namespace LemonadeStandGame.cs
 {
     class Lemon
     {
-        public List<Lemon> lemon = new List<Lemon>();
+        public static decimal cost;
+        public Lemon()
+        {
+            cost = 0.25M;
+        }
     }
 }

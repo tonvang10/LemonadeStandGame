@@ -8,6 +8,10 @@ namespace LemonadeStandGame.cs
 {
     class SugarCube
     {
-        public List<SugarCube> sugarCube = new List<SugarCube>();
+        public static decimal cost;
+        public SugarCube()
+        {
+            cost = .05M;
+        }
     }
 }

@@ -12,7 +12,7 @@ namespace LemonadeStandGame.cs
         public Player player;
         public Weather weather;
         public Store store;
-        public Inventory inventory;
+        
 
         public Game()
         {
@@ -20,7 +20,7 @@ namespace LemonadeStandGame.cs
             player = new Player();
             weather = new Weather();
             store = new Store();
-            inventory = new Inventory();
+
         }
         public void StartGame()
         {
@@ -39,7 +39,7 @@ namespace LemonadeStandGame.cs
                     store.GoToStore();
                     store.ShowStorePrices();
                     player.BuyIngridients();
-                    inventory.DisplaySupplies();
+                    player.inventory.DisplaySupplies();
                     player.MakeLemonade();
                     days++;
                 }

@@ -8,6 +8,10 @@ namespace LemonadeStandGame.cs
 {
     class Cup
     {
-        public List<Cup> cup = new List<Cup>();
+        public static decimal cost;
+        public Cup()
+        {
+            cost = .05M;
+        }
     }
 }

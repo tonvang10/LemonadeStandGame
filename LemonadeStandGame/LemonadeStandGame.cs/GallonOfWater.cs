@@ -8,6 +8,10 @@ namespace LemonadeStandGame.cs
 {
     class GallonOfWater
     {
-        public List<GallonOfWater> gallonOfWater = new List<GallonOfWater>();
+        public static decimal cost;
+        public GallonOfWater()
+        {
+            cost = 1.00M;
+        }
     }
 }

@@ -8,7 +8,6 @@ namespace LemonadeStandGame.cs
 {
     class Recipe : Inventory
     {
-        public Store market;
         decimal lemonUsed;
         decimal sugarCubeUsed;
         decimal iceCubeUsed;
@@ -17,7 +16,6 @@ namespace LemonadeStandGame.cs
         
         public Recipe()
         {
-            market = new Store();
         }
         public void UseLemons()
         {
@@ -25,7 +23,6 @@ namespace LemonadeStandGame.cs
             {
                 Console.WriteLine("How many lemons do you want to use?");
                 lemonUsed = decimal.Parse(Console.ReadLine());
-                lemonPurchased = lemonPurchased - lemonUsed;
             }
             catch (Exception)
             {
@@ -39,7 +36,6 @@ namespace LemonadeStandGame.cs
             {
                 Console.WriteLine("How many sugar cubes do you want to use?");
                 sugarCubeUsed = decimal.Parse(Console.ReadLine());
-                sugarCubePurchased = sugarCubePurchased - sugarCubeUsed;
             }
             catch (Exception)
             {
@@ -53,7 +49,7 @@ namespace LemonadeStandGame.cs
             {
                 Console.WriteLine("How many ice cubes do you want to use?");
                 iceCubeUsed = decimal.Parse(Console.ReadLine());
-                iceCubePurchased = iceCubePurchased - iceCubeUsed;
+
             }
             catch (Exception)
             {
@@ -67,7 +63,6 @@ namespace LemonadeStandGame.cs
             {
                 Console.WriteLine("How many gallons of water do you want to use?");
                 gallonOfWaterUsed = decimal.Parse(Console.ReadLine());
-                gallonOfWaterPurchased = gallonOfWaterPurchased - gallonOfWaterUsed;
             }
             catch (Exception)
             {
@@ -81,7 +76,6 @@ namespace LemonadeStandGame.cs
             {
                 Console.WriteLine("How many cups do you want to use?");
                 cupUsed = decimal.Parse(Console.ReadLine());
-                cupPurchased = cupPurchased - cupUsed;
             }
             catch (Exception)
             {
