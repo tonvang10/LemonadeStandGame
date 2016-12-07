@@ -9,11 +9,11 @@ namespace LemonadeStandGame.cs
     class Store
     {
         public Money money;
-        public List<decimal> lemons;
-        public List<decimal> sugarCubes;
-        public List<decimal> iceCubes;
-        public List<decimal> gallonsOfWater;
-        public List<decimal> cups;
+        public List<Lemon> lemons = new List<Lemon>();
+        public List<SugarCube> sugarCubes = new List<SugarCube>();
+        public List<IceCube> iceCubes = new List<IceCube>();
+        public List<GallonOfWater> gallonsOfWater = new List<GallonOfWater>();
+        public List<Cup> cups = new List<Cup>();
         public decimal lemonPurchased;
         public decimal sugarCubePurchased;
         public decimal iceCubePurchased;
@@ -31,11 +31,6 @@ namespace LemonadeStandGame.cs
         public Store()
         {
             money = new Money();
-            lemons = new List<decimal>();
-            sugarCubes = new List<decimal>();
-            iceCubes = new List<decimal>();
-            gallonsOfWater = new List<decimal>();
-            cups = new List<decimal>();
         }
         public decimal GetBalanceOfMoney()
         {
@@ -49,7 +44,7 @@ namespace LemonadeStandGame.cs
                 lemonPurchased = decimal.Parse(Console.ReadLine());
                 for (i = 0; i < lemonPurchased; i++)
                 {
-                    lemons.Add(lemonPurchased);
+                    lemons.Add(new Lemon());
                 }
                 balanceOfMoney = money.GetMoney() - (lemonPurchased * lemonCost);
                 if (balanceOfMoney > 0)
@@ -76,7 +71,7 @@ namespace LemonadeStandGame.cs
                 sugarCubePurchased = decimal.Parse(Console.ReadLine());
                 for (i = 0; i < sugarCubePurchased; i++)
                 {
-                    sugarCubes.Add(sugarCubePurchased);
+                    sugarCubes.Add(new SugarCube());
                 }
                 balanceOfMoney = balanceOfMoney - (sugarCubePurchased * sugarCubeCost);
                 if (balanceOfMoney > 0)
@@ -103,7 +98,7 @@ namespace LemonadeStandGame.cs
                 iceCubePurchased = decimal.Parse(Console.ReadLine());
                 for (i = 0; i < iceCubePurchased; i++)
                 {
-                    iceCubes.Add(iceCubePurchased);
+                    iceCubes.Add(new IceCube());
                 }
                 balanceOfMoney = balanceOfMoney - (iceCubePurchased * iceCubeCost);
                 if (balanceOfMoney > 0)
@@ -130,7 +125,7 @@ namespace LemonadeStandGame.cs
                 gallonOfWaterPurchased = decimal.Parse(Console.ReadLine());
                 for (i = 0; i < gallonOfWaterPurchased; i++)
                 {
-                    gallonsOfWater.Add(gallonOfWaterPurchased);
+                    gallonsOfWater.Add(new GallonOfWater());
                 }
                 balanceOfMoney = balanceOfMoney - (gallonOfWaterPurchased * gallonOfWaterCost);
                 if (balanceOfMoney > 0)
@@ -157,7 +152,7 @@ namespace LemonadeStandGame.cs
                 cupPurchased = decimal.Parse(Console.ReadLine());
                 for (i = 0; i < cupPurchased; i++)
                 {
-                    cups.Add(cupPurchased);
+                    cups.Add(new Cup());
                 }
                 remainingBalanceOfMoney = balanceOfMoney - (cupPurchased * cupCost);
                 if (balanceOfMoney > 0)

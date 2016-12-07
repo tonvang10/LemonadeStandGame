@@ -12,12 +12,16 @@ namespace LemonadeStandGame.cs
         public Recipe recipe;
         public Store store;
         string name;
-
+  
        public Player()
         {
             recipe = new Recipe();
             store = new Store();
             customer = new Customer();
+        }
+        public void SellLemonade()
+        {
+            Console.WriteLine("");
         }
         public void MakeLemonade()
         {
@@ -35,6 +39,9 @@ namespace LemonadeStandGame.cs
             store.BuyIceCubes();
             store.BuyGallonsOfWater();
             store.BuyCups();
+            Console.ForegroundColor = ConsoleColor.Yellow;
+            Console.WriteLine("Great, let's make lemonade.\n");
+            Console.ResetColor();
         }
         public void GetPlayerName()
         {

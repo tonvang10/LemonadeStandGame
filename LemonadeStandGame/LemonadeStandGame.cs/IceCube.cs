@@ -6,8 +6,8 @@ using System.Threading.Tasks;
 
 namespace LemonadeStandGame.cs
 {
-    class IceCube : Store
+    class IceCube 
     {
-        public List<decimal> IceCubes = new List<decimal>();
+        public List<IceCube> iceCube = new List<IceCube>();
     }
 }

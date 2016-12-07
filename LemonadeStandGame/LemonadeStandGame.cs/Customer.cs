@@ -6,27 +6,25 @@ using System.Threading.Tasks;
 
 namespace LemonadeStandGame.cs
 {
-    class Customer
+    class Customer : Weather
     {
-        List<string> customers = new List<string>();
+        List<decimal> customers = new List<decimal>();
+        decimal numberOfCustomers = 100;
+        decimal priceOfLemonade;
+
         public Customer()
         {
-
+            
         }
-        public void DisplayCustomers()
+        public void AddCustomers()
         {
-            foreach (string customernumber in customers)
-            {
-                Console.WriteLine(customernumber);
-            }
+            customers.Add(numberOfCustomers);
         }   
-        public void BuyLemonade()
+        public decimal BuyLemonade()
         {
-            //int i = 0;
-            //while (i < 1)
-            //{
-            //}
-            //++i;
+            Console.WriteLine("Hi, I would like a cup of lemonade. How much are you selling it for?");
+            priceOfLemonade = decimal.Parse(Console.ReadLine());
+            return priceOfLemonade;
         }
     }
 }

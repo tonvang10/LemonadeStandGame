@@ -6,8 +6,8 @@ using System.Threading.Tasks;
 
 namespace LemonadeStandGame.cs
 {
-    class GallonOfWater : Store
+    class GallonOfWater
     {
-        public List<decimal> GallonsOfWater = new List<decimal>();
+        public List<GallonOfWater> gallonOfWater = new List<GallonOfWater>();
     }
 }
