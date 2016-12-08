@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -40,7 +41,6 @@ namespace LemonadeStandGame.cs
                 player.inventory.DisplaySupplies();
                 player.MakeLemonade();
                 Console.ReadLine();
-
                 days++;
                 }
         }

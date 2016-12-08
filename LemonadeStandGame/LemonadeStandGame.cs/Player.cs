@@ -33,10 +33,6 @@ namespace LemonadeStandGame.cs
             inventory = new Inventory();
             customer = new Customer();
         }
-        public void SellLemonade()
-        {
-            Console.WriteLine("");
-        }
         public void MakeLemonade()
         {
             UseLemons();

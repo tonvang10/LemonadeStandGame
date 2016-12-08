@@ -16,6 +16,5 @@ namespace LemonadeStandGame.cs
             priceOfLemonade = decimal.Parse(Console.ReadLine());
             return priceOfLemonade;
         }
-
     }
 }

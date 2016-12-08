@@ -21,7 +21,6 @@ namespace LemonadeStandGame.cs
             condition[6] = "69" + " degrees";
             condition[7] = "75" + " degrees";
             Console.WriteLine("The weather temperature today is {0}.\n", (condition[temperatures.Next(0, 7)]));
-            Console.ReadLine();
         }
     }
 }

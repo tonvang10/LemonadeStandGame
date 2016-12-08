@@ -7,7 +7,6 @@ using System.Threading.Tasks;
 namespace LemonadeStandGame.cs
 {
     class Recipe 
-    {
-       
+    { 
     }
 }
