@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace LemonadeStandGame.cs
 {
-    class Recipe : Inventory
+    class Recipe : Player
     {
         decimal lemonUsed;
         decimal sugarCubeUsed;
@@ -14,15 +14,13 @@ namespace LemonadeStandGame.cs
         decimal gallonOfWaterUsed;
         decimal cupUsed;
         
-        public Recipe()
-        {
-        }
         public void UseLemons()
         {
             try
             {
                 Console.WriteLine("How many lemons do you want to use?");
                 lemonUsed = decimal.Parse(Console.ReadLine());
+                inventory.lemons.RemoveAt(Convert.ToInt32(lemonUsed));
             }
             catch (Exception)
             {
@@ -36,6 +34,7 @@ namespace LemonadeStandGame.cs
             {
                 Console.WriteLine("How many sugar cubes do you want to use?");
                 sugarCubeUsed = decimal.Parse(Console.ReadLine());
+                inventory.sugarCubes.RemoveAt(Convert.ToInt32(sugarCubeUsed));
             }
             catch (Exception)
             {
@@ -49,7 +48,7 @@ namespace LemonadeStandGame.cs
             {
                 Console.WriteLine("How many ice cubes do you want to use?");
                 iceCubeUsed = decimal.Parse(Console.ReadLine());
-
+                inventory.iceCubes.RemoveAt(Convert.ToInt32(iceCubeUsed));
             }
             catch (Exception)
             {
@@ -63,6 +62,7 @@ namespace LemonadeStandGame.cs
             {
                 Console.WriteLine("How many gallons of water do you want to use?");
                 gallonOfWaterUsed = decimal.Parse(Console.ReadLine());
+                inventory.gallonsOfWater.RemoveAt(Convert.ToInt32(gallonOfWaterUsed));
             }
             catch (Exception)
             {
@@ -76,6 +76,7 @@ namespace LemonadeStandGame.cs
             {
                 Console.WriteLine("How many cups do you want to use?");
                 cupUsed = decimal.Parse(Console.ReadLine());
+                inventory.cups.RemoveAt(Convert.ToInt32(cupUsed));
             }
             catch (Exception)
             {

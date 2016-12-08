@@ -8,9 +8,5 @@ namespace LemonadeStandGame.cs
 {
     class Day
     {
-        public Day()
-        {
-
-        }
     }
 }

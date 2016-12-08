@@ -8,19 +8,16 @@ namespace LemonadeStandGame.cs
 {
     class Game
     {
-        public Day day;
+        List<Customer> customers = new List<Customer>();
         public Player player;
-        public Weather weather;
         public Store store;
-        
-
+        public Weather weather;
+          
         public Game()
         {
-            day = new Day();
             player = new Player();
-            weather = new Weather();
             store = new Store();
-
+            weather = new Weather();
         }
         public void StartGame()
         {
@@ -31,18 +28,28 @@ namespace LemonadeStandGame.cs
             int days = 1;
                 while (days < 8)
                 {
-                    Console.ForegroundColor = ConsoleColor.Red;
-                    Console.WriteLine("DAY {0}", days);
-                    Console.ResetColor();
-                    Console.WriteLine("GOOD LUCK!\n");
-                    weather.PickWeatherCondition();
-                    store.GoToStore();
-                    store.ShowStorePrices();
-                    player.BuyIngridients();
-                    player.inventory.DisplaySupplies();
-                    player.MakeLemonade();
-                    days++;
+                Console.ForegroundColor = ConsoleColor.Red;
+                Console.WriteLine("DAY {0}", days);
+                Console.ResetColor();
+                Console.WriteLine("GOOD LUCK!\n");
+                weather.PickWeatherCondition();
+                store.GoToStore();
+                store.ShowStorePrices();
+                player.BuyIngridients();
+                player.inventory.DisplaySupplies();
+                player.MakeLemonade();
+                AddCustomers();
+
+                days++;
                 }
+        }
+        public void AddCustomers()
+        {
+            Random rndcustomer = new Random();
+            for (int i = 0; i < 150; i++)
+            {
+                customers.Add(new Customer());
+            }
         }
         public void GetStartingBalnce()
         {

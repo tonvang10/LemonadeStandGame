@@ -7,10 +7,7 @@ using System.Threading.Tasks;
 namespace LemonadeStandGame.cs
 {
     class Store
-    {
-        public Store()
-        {
-        }    
+    { 
         public void GoToStore()
         {
             Console.WriteLine("Let's go to the store.\nPress **ENTER** to enter");

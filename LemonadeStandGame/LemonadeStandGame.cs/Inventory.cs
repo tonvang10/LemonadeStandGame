@@ -13,9 +13,7 @@ namespace LemonadeStandGame.cs
         public List<IceCube> iceCubes = new List<IceCube>();
         public List<GallonOfWater> gallonsOfWater = new List<GallonOfWater>();
         public List<Cup> cups = new List<Cup>();
-        public Inventory()
-        { 
-        }
+
         public void DisplaySupplies()
         {
             StockLemons();

@@ -12,20 +12,20 @@ namespace LemonadeStandGame.cs
         public Recipe recipe;
         public Inventory inventory;
         public Money money;
-        public decimal lemonPurchased;
-        public decimal sugarCubePurchased;
-        public decimal iceCubePurchased;
-        public decimal gallonOfWaterPurchased;
-        public decimal cupPurchased;
+        decimal lemonPurchased;
+        decimal sugarCubePurchased;
+        decimal iceCubePurchased;
+        decimal gallonOfWaterPurchased;
+        decimal cupPurchased;
         decimal balanceOfMoney;
         decimal remainingBalanceOfMoney;
         string name;
 
         public Player()
         {
-            money = new cs.Money();
+            money = new Money();
             recipe = new Recipe();
-            inventory = new cs.Inventory();
+            inventory = new Inventory();
             customer = new Customer();
         }
         public void SellLemonade()
@@ -41,6 +41,10 @@ namespace LemonadeStandGame.cs
             recipe.UseCup();
             Console.WriteLine("Good luck!\n");
         }
+        public decimal GetBalanceOfMoney()
+        {
+            return remainingBalanceOfMoney;
+        }
         public void BuyIngridients()
         {
             BuyLemons();
@@ -51,18 +55,6 @@ namespace LemonadeStandGame.cs
             Console.ForegroundColor = ConsoleColor.Yellow;
             Console.WriteLine("Great, let's make lemonade.\n");
             Console.ResetColor();
-        }
-        public void GetPlayerName()
-        {
-            Console.WriteLine("What is your name?");
-            name = Console.ReadLine();
-            Console.ForegroundColor = ConsoleColor.Green;
-            Console.WriteLine("Good luck {0}!\n", name);
-            Console.ResetColor();
-        }
-        public decimal GetBalanceOfMoney()
-        {
-            return remainingBalanceOfMoney;
         }
         public bool BuyLemons()
         {
@@ -198,6 +190,14 @@ namespace LemonadeStandGame.cs
                 BuyCups();
             }
             return true;
+        }
+        public void GetPlayerName()
+        {
+            Console.WriteLine("What is your name?");
+            name = Console.ReadLine();
+            Console.ForegroundColor = ConsoleColor.Green;
+            Console.WriteLine("Good luck {0}!\n", name);
+            Console.ResetColor();
         }
     }
 }
