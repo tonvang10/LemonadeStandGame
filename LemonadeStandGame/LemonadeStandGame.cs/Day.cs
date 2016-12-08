@@ -8,5 +8,10 @@ namespace LemonadeStandGame.cs
 {
     class Day
     {
+        public static decimal days;
+        public Day()
+        {
+            days = 7M;
+        }
     }
 }

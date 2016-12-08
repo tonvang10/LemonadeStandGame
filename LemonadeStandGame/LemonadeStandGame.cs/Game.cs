@@ -35,10 +35,11 @@ namespace LemonadeStandGame.cs
                 weather.PickWeatherCondition();
                 store.GoToStore();
                 store.ShowStorePrices();
+                player.ShowMoney();
                 player.BuyIngridients();
                 player.inventory.DisplaySupplies();
                 player.MakeLemonade();
-                AddCustomers();
+                Console.ReadLine();
 
                 days++;
                 }

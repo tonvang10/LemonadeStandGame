@@ -10,7 +10,7 @@ namespace LemonadeStandGame.cs
     {
         decimal priceOfLemonade;  
 
-        public decimal BuyLemonade()
+        public decimal AskForPrice()
         {
             Console.WriteLine("Hi, I would like a cup of lemonade. How much are you selling it for?");
             priceOfLemonade = decimal.Parse(Console.ReadLine());

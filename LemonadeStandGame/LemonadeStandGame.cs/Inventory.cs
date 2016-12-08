@@ -16,29 +16,29 @@ namespace LemonadeStandGame.cs
 
         public void DisplaySupplies()
         {
-            StockLemons();
-            StockSugarCubes();
-            StockIceCubes();
-            StockGallonsOfWater();
-            StockCups();
+            ShowLemonStock();
+            ShowSugarStock();
+            ShowIceStock();
+            ShowWaterStock();
+            ShowCupStock();
         }
-        public void StockLemons()
+        public void ShowLemonStock()
         {
             Console.WriteLine("You have {0} lemons.", lemons.Count);
         }
-        public void StockSugarCubes()
+        public void ShowSugarStock()
         {
             Console.WriteLine("You have {0} sugar cubes.", sugarCubes.Count);
         }
-        public void StockIceCubes()
+        public void ShowIceStock()
         {
             Console.WriteLine("You have {0} ice cubes.", iceCubes.Count);
         }
-        public void StockGallonsOfWater()
+        public void ShowWaterStock()
         {
             Console.WriteLine("You have {0} gallons of water.", gallonsOfWater.Count);
         }
-        public void StockCups()
+        public void ShowCupStock()
         {
             Console.WriteLine("You have {0} cups.\n", cups.Count);
         }

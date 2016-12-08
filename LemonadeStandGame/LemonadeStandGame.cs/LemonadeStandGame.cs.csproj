@@ -50,7 +50,7 @@
     <Compile Include="Game.cs" />
     <Compile Include="IceCube.cs" />
     <Compile Include="Inventory.cs" />
-    <Compile Include="IUser.cs" />
+    <Compile Include="IUsable.cs" />
     <Compile Include="Lemon.cs" />
     <Compile Include="Money.cs" />
     <Compile Include="Player.cs" />

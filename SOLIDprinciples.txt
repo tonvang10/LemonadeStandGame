@@ -1,0 +1,36 @@
+1. Single Responsibility Principle.
+- Here, I made sure each function did what it was suppose to do.
+
+        public void ShowLemonStock()
+        {
+            Console.WriteLine("You have {0} lemons.", lemons.Count);
+        }
+        public void ShowSugarStock()
+        {
+            Console.WriteLine("You have {0} sugar cubes.", sugarCubes.Count);
+        }
+        public void ShowIceStock()
+        {
+            Console.WriteLine("You have {0} ice cubes.", iceCubes.Count);
+        }
+        public void ShowWaterStock()
+        {
+            Console.WriteLine("You have {0} gallons of water.", gallonsOfWater.Count);
+        }
+        public void ShowCupStock()
+        {
+            Console.WriteLine("You have {0} cups.\n", cups.Count);
+        }
+
+2. Open/Close Principle.
+- Here, is an easy adjustment of how much money a player starts with.
+
+    class Money
+    {
+        decimal money = 20.00M;
+
+        public decimal GetMoney()
+        {
+            return money;
+        }
+    }

@@ -12,11 +12,16 @@ namespace LemonadeStandGame.cs
         public Recipe recipe;
         public Inventory inventory;
         public Money money;
-        decimal lemonPurchased;
-        decimal sugarCubePurchased;
-        decimal iceCubePurchased;
-        decimal gallonOfWaterPurchased;
-        decimal cupPurchased;
+        int lemonUsed;
+        int sugarCubeUsed;
+        int iceCubeUsed;
+        int gallonOfWaterUsed;
+        int cupUsed;
+        int lemonPurchased;
+        int sugarCubePurchased;
+        int iceCubePurchased;
+        int gallonOfWaterPurchased;
+        int cupPurchased;
         decimal balanceOfMoney;
         decimal remainingBalanceOfMoney;
         string name;
@@ -32,23 +37,138 @@ namespace LemonadeStandGame.cs
         {
             Console.WriteLine("");
         }
-                        //inventory.lemons.RemoveAt(Convert.ToInt32(lemonUsed));
-                //inventory.cups.RemoveAt(Convert.ToInt32(cupUsed));
-                //inventory.gallonsOfWater.RemoveAt(Convert.ToInt32(gallonOfWaterUsed));
-                //inventory.iceCubes.RemoveAt(Convert.ToInt32(iceCubeUsed));
-                //inventory.sugarCubes.RemoveAt(Convert.ToInt32(sugarCubeUsed));
         public void MakeLemonade()
         {
-            recipe.UseLemons();
-            recipe.UseSugarCubes();
-            recipe.UseIceCubes();
-            recipe.UseGallonOfWater();
-            recipe.UseCup();
+            UseLemons();
+            UseSugarCubes();
+            UseIceCubes();
+            UseGallonsOfWater();
+            UseCups();
             Console.WriteLine("Good luck!\n");
         }
-        public decimal GetBalanceOfMoney()
+        public bool UseLemons()
         {
-            return remainingBalanceOfMoney;
+            try
+            {
+                Console.WriteLine("How many lemons do you want to use?");
+                lemonUsed = Convert.ToInt32(Console.ReadLine());
+            }
+            catch (Exception)
+            {
+                Console.WriteLine("PLEASE ENTER A NUMBER.");
+                UseLemons();
+            }
+            inventory.lemons.RemoveRange(0, lemonUsed);
+            if (lemonUsed < lemonPurchased)
+            {
+                return false;
+            }
+            else
+            {
+                Console.WriteLine("Oops, you don't have enough. Please enter an amount you have.");
+                UseLemons();
+                return true;
+            }
+        }
+        public bool UseSugarCubes()
+        {
+            try
+            {
+                Console.WriteLine("How many sugar cubes do you want to use?");
+                sugarCubeUsed = Convert.ToInt32(Console.ReadLine());
+            }
+            catch (Exception)
+            {
+                Console.WriteLine("PLEASE ENTER A NUMBER.");
+                UseSugarCubes();
+            }
+            inventory.sugarCubes.RemoveRange(0, sugarCubeUsed);
+            if (sugarCubeUsed < sugarCubePurchased)
+            {
+                return true;
+            }
+            else
+            {
+                Console.WriteLine("Oops, you don't have enough. Please enter an amount you have.");
+                UseSugarCubes();
+                return false;
+            }
+        }
+        public bool UseIceCubes()
+        {
+            try
+            {
+                Console.WriteLine("How many ice cubes do you want to use?");
+                iceCubeUsed = Convert.ToInt32(Console.ReadLine());
+            }
+            catch (Exception)
+            {
+                Console.WriteLine("PLEASE ENTER A NUMBER.");
+                UseIceCubes();
+            }
+            inventory.iceCubes.RemoveRange(0, iceCubeUsed);
+            if (iceCubeUsed < iceCubePurchased)
+            {
+                return true;
+            }
+            else
+            {
+                Console.WriteLine("Oops, you don't have enough. Please enter an amount you have.");
+                UseIceCubes();
+                return false;
+            }
+        }
+        public bool UseGallonsOfWater()
+        {
+            try
+            {
+                Console.WriteLine("How many gallons of water do you want to use?");
+                gallonOfWaterUsed = Convert.ToInt32(Console.ReadLine());
+            }
+            catch (Exception)
+            {
+                Console.WriteLine("PLEASE ENTER A NUMBER.");
+                UseGallonsOfWater();
+            }
+                inventory.gallonsOfWater.RemoveRange(0, gallonOfWaterUsed);
+            if (gallonOfWaterUsed < gallonOfWaterPurchased)
+            {
+                return true;
+            }
+            else
+            {
+                Console.WriteLine("Oops, you don't have enough. Please enter an amount you have.");
+                UseGallonsOfWater();
+                return false;
+            }
+        }
+        public bool UseCups()
+        {
+            try
+            {
+                Console.WriteLine("How many cups do you want to use?");
+                cupUsed = Convert.ToInt32(Console.ReadLine());
+            }
+            catch (Exception)
+            {
+                Console.WriteLine("PLEASE ENTER A NUMBER.");
+                UseCups();
+            }
+            inventory.cups.RemoveRange(0, cupUsed);
+            if (cupUsed < cupPurchased)
+            {
+                return true;
+            }
+            else
+            {
+                Console.WriteLine("Oops, you don't have enough. Please enter an amount you have.");
+                UseCups();
+                return false;
+            }
+        }
+        public void ShowMoney()
+        {
+            Console.WriteLine("Your money: {0} \n", money.GetMoney());
         }
         public void BuyIngridients()
         {
@@ -66,7 +186,7 @@ namespace LemonadeStandGame.cs
             try
             {
                 Console.WriteLine("How many lemons would you like to purchase?");
-                lemonPurchased = decimal.Parse(Console.ReadLine());
+                lemonPurchased = Convert.ToInt32(Console.ReadLine());
             }
             catch (Exception)
             {
@@ -89,14 +209,13 @@ namespace LemonadeStandGame.cs
                 BuyLemons();
                 return false;
                 }
-
         }
         public bool BuySugarCubes()
         {
             try
             {
                 Console.WriteLine("How many sugar cubes would you like to purchase?");
-                sugarCubePurchased = decimal.Parse(Console.ReadLine());
+                sugarCubePurchased = Convert.ToInt32(Console.ReadLine());
             }
             catch (Exception)
             {
@@ -125,7 +244,7 @@ namespace LemonadeStandGame.cs
             try
             {
                 Console.WriteLine("How many ice cubes would you like to purcahse?");
-                iceCubePurchased = decimal.Parse(Console.ReadLine());
+                iceCubePurchased = Convert.ToInt32(Console.ReadLine());
             }
             catch (Exception)
             {
@@ -154,7 +273,7 @@ namespace LemonadeStandGame.cs
             try
             {
                 Console.WriteLine("How many gallons of water would you like to purchase?");
-                gallonOfWaterPurchased = decimal.Parse(Console.ReadLine());
+                gallonOfWaterPurchased = Convert.ToInt32(Console.ReadLine());
             }
             catch (Exception)
             {
@@ -183,7 +302,7 @@ namespace LemonadeStandGame.cs
             try
             {
                 Console.WriteLine("How many cups would you like to purchase?");
-                cupPurchased = decimal.Parse(Console.ReadLine());
+                cupPurchased = Convert.ToInt32(Console.ReadLine());
             }
             catch (Exception)
             {

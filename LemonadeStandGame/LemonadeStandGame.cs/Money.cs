@@ -9,6 +9,7 @@ namespace LemonadeStandGame.cs
     class Money
     {
         decimal money = 20.00M;
+
         public decimal GetMoney()
         {
             return money;
