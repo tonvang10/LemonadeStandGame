@@ -1,0 +1,363 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<logicalClassDesignerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" dslVersion="1.0.0.0" Id="0bfada3e-30cf-4a28-980f-816818eb5fb6" name="UMLClassDiagram1" linkedPackageId="69ad59a4-145b-47b3-9499-76e9d4be5f5a" xmlns="http://schemas.microsoft.com/dsltools/LogicalClassDesigner">
+  <profileInstances>
+    <packageHasProfileInstances Id="a98be3fe-16a2-4c4e-90c9-99fab08d39df">
+      <profileInstance Id="ae2af16e-075a-479e-a151-ab52d247aee2" name="StandardProfileL2">
+        <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+      </profileInstance>
+      <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+    </packageHasProfileInstances>
+    <packageHasProfileInstances Id="fc9cc1da-4841-4318-9c25-c74c09d5b50d">
+      <profileInstance Id="7ca24d99-5054-43e2-84b1-f48e7241d479" name="StandardProfileL3">
+        <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+      </profileInstance>
+      <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+    </packageHasProfileInstances>
+  </profileInstances>
+  <packagedElements>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="37f83ce6-ae5e-49ca-9596-41c0a5af6a8d" name="Game" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="35e14de7-4693-42b6-8273-17e82de58607" />
+        <suppliersInternal>
+          <dependency Id="35e49377-eec5-433d-b21c-74d79743e276">
+            <classMoniker Id="caa07278-9c8b-4b30-b5f8-0079d4bcaeba" LastKnownName="Weather" />
+            <elementDefinition Id="e8f50486-2c13-427d-b468-c0db3413c76f" />
+          </dependency>
+          <dependency Id="77fd81b3-3e1c-49c0-9331-e443f8b9cc3e">
+            <classMoniker Id="8c726574-a1ad-4176-acc9-e923141c9037" LastKnownName="Store" />
+            <elementDefinition Id="b04c4ed0-5f46-45b5-814e-19a18923592b" />
+          </dependency>
+          <dependency Id="c02f150a-546d-4c23-b62c-8cf089a48738">
+            <classMoniker Id="369fcec5-65a1-442f-97ec-67085b8b3a24" LastKnownName="Player" />
+            <elementDefinition Id="eebf7fff-aee8-4743-8ac4-7dba500020fb" />
+          </dependency>
+        </suppliersInternal>
+        <ownedOperationsInternal>
+          <operation Id="975072fb-95d9-4e98-88a1-0617326435bf" name="public Game" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="eaf70b26-ec63-4b3c-8511-0c021d9f014f" />
+          </operation>
+          <operation Id="e0712ec4-fe0c-4dae-a27d-0b1fe88b9542" name="public void StartGame" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="90453e7f-3b45-4734-b0ac-f3a5b422d5ea" />
+          </operation>
+          <operation Id="318e8374-a443-4b66-a112-3e0ff4147608" name="public void AddCustomers" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="178b8646-b751-4e7a-9ae8-7f37100ab905" />
+          </operation>
+          <operation Id="b645f24b-29c3-49c1-913d-408fed059d82" name="public void GetStartingBalance" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="8f3d1f01-6d0b-45c0-82fc-03be58df6b2f" />
+          </operation>
+          <operation Id="c29cccb7-176d-4c55-91e6-6baf419559ff" name="public void Welcome" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="230778c0-ef07-44fe-b5b4-f3c9a1aef04e" />
+          </operation>
+          <operation Id="336d6de1-e1f0-4bc2-bc4e-d8dc440ae05f" name="public void ShowInstructions" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="6af9d420-ba5a-4b18-8b26-afbc3571b3cc" />
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="369fcec5-65a1-442f-97ec-67085b8b3a24" name="Player" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="5765e988-e055-48b8-8651-321537a55d90" />
+        <suppliersInternal>
+          <dependency Id="10157a9f-e0d9-4ef3-ad98-b39a5e6cd04a">
+            <classMoniker Id="1f08cc26-2781-44cb-be8a-59a31dec5426" LastKnownName="Recipe" />
+            <elementDefinition Id="8d0c91ca-3b06-418e-9c51-db92b79e85de" />
+          </dependency>
+          <dependency Id="151203ec-1949-47a4-9050-cb52a377588f">
+            <classMoniker Id="5f73c7aa-f06a-4ca0-994e-7c5332be1f60" LastKnownName="Inventory" />
+            <elementDefinition Id="c212895a-8e5a-404d-a8d8-8d7ccb884510" />
+          </dependency>
+          <dependency Id="390e5016-da4f-4543-ae3e-ef7f01fb7f6a">
+            <classMoniker Id="d9f7405b-7953-4041-be09-c348b9a1b274" LastKnownName="Money" />
+            <elementDefinition Id="c17dcfc7-9fca-464b-9fda-1949baf9682e" />
+          </dependency>
+        </suppliersInternal>
+        <ownedAttributesInternal>
+          <property Id="29f4978f-313d-43be-844e-2e95bd5c30cc" name="int lemonUsed" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="60fdafe1-0295-432c-882f-9a4798eb23f4" />
+          </property>
+          <property Id="bfa6c838-25be-4d72-ab63-14cf52b23eca" name="int sugarCubeUsed" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="a920395a-1d4d-4770-ac2a-5b9492cc54aa" />
+          </property>
+          <property Id="d3306f5e-5ed1-4537-b119-67a1e05c7bf6" name="int iceCubeUsed" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="1fcbb55c-ccbe-44e3-ad0e-813085260c77" />
+          </property>
+          <property Id="caa1b618-479d-43f1-906e-feb29610a23f" name="int gallonOfWaterUsed" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="d57ac39e-c6ee-4cad-a5ba-1316282e38e5" />
+          </property>
+          <property Id="66d7d25a-4099-4d93-9ddd-a4eddcdcd3a1" name="int cupUsed" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="64f68d1a-0cc7-4799-809a-403f08a895ea" />
+          </property>
+          <property Id="14377055-a816-47fe-8355-eb67e78e93c2" name="int lemonPurchased" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="334d5367-0854-49b3-9f4c-f9dc48fbf3d5" />
+          </property>
+          <property Id="567d5c42-0823-417c-8d2b-7cfbce128142" name="int sugarCubePurchased" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="e9504ff7-6107-4843-8339-fc807f583727" />
+          </property>
+          <property Id="90e54688-d972-429f-85e3-7faf251605c0" name="int iceCubePurchased" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="83009a6f-39ca-4b38-a713-9cc4bd1ae7b7" />
+          </property>
+          <property Id="78dc384c-9208-4607-98b8-cf299dac9918" name="int gallonOfWaterPurchased" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="ca544dc0-0779-40d8-b2fe-abe45e9e2a3e" />
+          </property>
+          <property Id="2b811935-114e-427f-9aed-458716d9c85e" name="int cupPurchased" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="3e1750a2-4dba-4e0a-814e-e4494e40746d" />
+          </property>
+          <property Id="95095b55-ab54-4e09-9dd5-6d057360948f" name="decimal balanceOfMoney" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="d33efacb-4033-4548-a57e-e42105f79b32" />
+          </property>
+          <property Id="22091644-d18b-4098-a381-c64310e3d971" name="decimal remainingBalance" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="a83717c3-f4ba-44f9-b06b-ee5774efe282" />
+          </property>
+          <property Id="71d7b991-04a6-4169-ad39-80fdae9cc6e2" name="int name" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="13e8ea5f-075a-4409-8fcb-724e9a2a5f76" />
+          </property>
+        </ownedAttributesInternal>
+        <ownedOperationsInternal>
+          <operation Id="e175bf89-f20b-4b6e-9b69-2dc7ea28dcc2" name="Player" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="0ac24dac-ca33-4c4d-b87d-aa88469e63df" />
+          </operation>
+          <operation Id="33b9ea47-f10b-4f88-8585-f3c45a636766" name="public bool MakeLemonade" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="0a37689c-65b2-4dc0-a9f4-3ae5616c0291" />
+          </operation>
+          <operation Id="a798257e-7e12-413a-8c19-871a996b79e1" name="public bool UseLemon" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="24a5017e-f1f4-46c8-ace0-fcb159c8e24a" />
+          </operation>
+          <operation Id="48c7e39d-8037-4278-bfd8-1ca2fcddb48e" name="public bool UseSugarCube" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="ee762dcd-1b30-48dd-aabb-bfacc3719131" />
+          </operation>
+          <operation Id="158b9fc1-d1c3-47a3-a370-a337d27877d6" name="public bool UseIceCube" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="f2ac2d2e-1bd7-4acd-8ae6-e6ee861355f7" />
+          </operation>
+          <operation Id="b5ce249b-7ec9-4e25-92f9-a6e665d61ea7" name="public bool UseGallonOfWater" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="25eb759f-7786-4417-bf50-c852b6aad856" />
+          </operation>
+          <operation Id="1aee629e-7995-4c51-bff5-169f719c8ee0" name="public bool UseCup" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="4ea07e83-2c2b-4ba4-934b-1d3441844300" />
+          </operation>
+          <operation Id="baa7d214-59ca-45c6-acf2-adb2d4cf79ff" name="public void ShowMoney" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="07253b04-4b5e-4b46-bb3b-d146f1bc0a06" />
+          </operation>
+          <operation Id="70dd7566-3308-4a13-8b92-028ab822e5d1" name="public void BuyIngridients" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="55f06ce6-665f-4cc6-a3b7-539f36dde635" />
+          </operation>
+          <operation Id="cc48b6ae-c965-40d2-a63b-8de7aebaf1e1" name="public bool BuyLemon" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="fc17d192-0821-4517-b62e-dabaa87a8c96" />
+          </operation>
+          <operation Id="2a95ec3b-8aa2-44d4-8a03-7ee284521591" name="public bool BuySugarCube" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="b5202256-8d7e-429a-9fa4-b594c99c2eff" />
+          </operation>
+          <operation Id="e3b38d3b-9430-4fce-b81d-190b7422baf7" name="public bool BuyIceCube" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="43778ac9-c283-4eed-9624-8f9d3a394138" />
+          </operation>
+          <operation Id="cf9d708e-46f0-4972-b5ef-15ab78123dfd" name="public bool BuyGallonOfWater" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="be65e221-c441-4240-a4bb-5940953b7ed3" />
+          </operation>
+          <operation Id="e0e21a01-208b-4478-8ba5-7b3beaec7a10" name="public bool BuyCup" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="e50d9957-890b-49e4-8ab2-f19c642bae3e" />
+          </operation>
+          <operation Id="006e9a5f-77df-46d5-8dab-ebd257d8b466" name="public void GetPlayerName" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="e3315188-dfd5-4676-b978-a551a24f210f" />
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="8c726574-a1ad-4176-acc9-e923141c9037" name="Store" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="64d32b28-17a4-4455-a615-a7f93052f61f" />
+        <ownedOperationsInternal>
+          <operation Id="818950d1-23b0-4069-aef4-cf0e28394746" name="public void GoToStore" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="e361b690-0663-4374-9e94-f56e741e7749" />
+          </operation>
+          <operation Id="da623738-b445-4efa-b5fb-38b44d9c3065" name="public void ShowStorePrices" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="3b080b48-2428-4143-a17d-361e1a798c44" />
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="5f73c7aa-f06a-4ca0-994e-7c5332be1f60" name="Inventory" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="7218d729-aed0-44d4-9f57-4892df0fd786" />
+        <suppliersInternal>
+          <dependency Id="dedce4f0-1efe-44f0-bf83-237cb4954f75">
+            <classMoniker Id="6855020b-de0b-4a26-8dde-e6397a2e5a73" LastKnownName="Lemon" />
+            <elementDefinition Id="8c706737-d4aa-49c3-94f9-b65edac436f2" />
+          </dependency>
+          <dependency Id="27265c8f-e5f3-4ec8-a3aa-333186c1751b">
+            <classMoniker Id="e03ee030-0e12-4820-be2a-cf47444581f7" LastKnownName="SugarCube" />
+            <elementDefinition Id="d17c640b-8e3f-41ce-a904-beb0b3121d9e" />
+          </dependency>
+          <dependency Id="8c139eed-d3d5-4868-b407-3a981be8251b">
+            <classMoniker Id="d4066c47-4bbe-43b5-a073-bf28194ab6a9" LastKnownName="IceCube" />
+            <elementDefinition Id="591695b2-6b87-4648-9426-7cb463beb278" />
+          </dependency>
+          <dependency Id="d4df0263-e91f-4aa8-a7af-abf50a88219d">
+            <classMoniker Id="3f5da042-6326-41b8-8650-962e1759746f" LastKnownName="GallonOfWater" />
+            <elementDefinition Id="13a0bf39-7966-4449-941f-98af8bafe724" />
+          </dependency>
+          <dependency Id="36953014-9ac0-4fed-8790-debe2a43b1bd">
+            <classMoniker Id="58f65847-28ee-4295-b76e-7431adae1f5c" LastKnownName="Cup" />
+            <elementDefinition Id="c0f51116-51ca-4b0f-bd67-d2f879526a0e" />
+          </dependency>
+        </suppliersInternal>
+        <ownedOperationsInternal>
+          <operation Id="0f8292e4-4df4-4ef4-9672-f13c7de7075b" name="public void DisplaySupply" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="3c24134d-c7f6-453b-9269-ea23475f7717" />
+          </operation>
+          <operation Id="96aa6bcf-6704-4919-b2cc-05093d2db243" name="public void ShowLemon" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="122ec7aa-e651-456c-9d45-e43737bbf2ba" />
+          </operation>
+          <operation Id="e4e993b7-93b7-492a-96c1-e78ce6ec6956" name="public void ShowSugarStock" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="f4719c07-f107-4884-b33a-c97dd886cfcb" />
+          </operation>
+          <operation Id="fa30eca8-872a-4d28-8ef2-b7aad1e7fe4b" name="public void ShowIceStock" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="3bbcb734-27d2-4757-9a92-3efd5fb9e212" />
+          </operation>
+          <operation Id="7d346f56-7650-4a10-b56f-9134beaa3a0f" name="public void ShowWaterStock" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="7bb78ee0-035f-4fb0-9587-f5e142d6fbaf" />
+          </operation>
+          <operation Id="0717304e-e088-4a4b-b32f-8dac5e0f0e43" name="public void ShowCup" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="169d9895-6e74-4ba3-a310-cba2c32041c9" />
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="1f08cc26-2781-44cb-be8a-59a31dec5426" name="Recipe" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="65987389-6b43-4d08-bd47-0d593d08d136" />
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="496e6199-3a4f-45ce-9c1f-da05394c23b2" name="Customer" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="a49293bb-8e66-4ee8-93d4-66ad750780a8" />
+        <ownedAttributesInternal>
+          <property Id="aabd3145-50ee-4832-b055-94d711b372b8" name="decimal priceOfLemonade" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="eb437aa4-a9a2-4fbb-ba13-1c0c4995897e" />
+          </property>
+        </ownedAttributesInternal>
+        <ownedOperationsInternal>
+          <operation Id="4910c8ef-6a1d-4aab-9dc0-8e1516277978" name="public decimal AskForPrice" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="759fbf4e-f902-4bde-b26c-0621486cd024" />
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="caa07278-9c8b-4b30-b5f8-0079d4bcaeba" name="Weather" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="1859b9fe-4e71-4187-848d-b195437009d7" />
+        <ownedAttributesInternal>
+          <property Id="08cac993-7b7a-41e0-87fa-9d5f052ff5bb" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="27e69467-afa4-46e4-8ca4-12ca2d746dcd" />
+          </property>
+        </ownedAttributesInternal>
+        <ownedOperationsInternal>
+          <operation Id="d4b33c57-ca61-4fdb-9fec-6102445398a6" name="public void GetWeatherCondition" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="b2512c17-5e7b-4614-b26a-6f9f6ae14402" />
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="6855020b-de0b-4a26-8dde-e6397a2e5a73" name="Lemon" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="943abea3-02fa-4aff-827f-58c46576173d" />
+        <ownedAttributesInternal>
+          <property Id="bd04eb39-30a2-481b-b1de-a2bf44a88e23" name="public static decimal cost" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="d189c6c0-d618-49f4-81e6-44d2de10588f" />
+          </property>
+        </ownedAttributesInternal>
+        <ownedOperationsInternal>
+          <operation Id="20789924-10fa-4ae8-aa05-b2ece90b4442" name="public Lemon" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="e06dd1a8-ee85-4268-82e5-19196e58e009" />
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="e03ee030-0e12-4820-be2a-cf47444581f7" name="SugarCube" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="691b7a62-bf08-4d7c-a164-f7a503207dcb" />
+        <ownedAttributesInternal>
+          <property Id="55a44a87-1e88-4611-ab1b-f55dd94f9be7" name="public static decimal cost" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="6851652d-c652-445e-b93b-6dea7c299c11" />
+          </property>
+        </ownedAttributesInternal>
+        <ownedOperationsInternal>
+          <operation Id="618aa33d-4db8-489a-91c5-1d2c49cffcbd" name="public SugarCube" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="5162048c-3d93-496e-872d-9aa5bad21ce5" />
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="d4066c47-4bbe-43b5-a073-bf28194ab6a9" name="IceCube" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="4cac5a6c-925e-40d2-ae3d-1e88a908fc07" />
+        <ownedAttributesInternal>
+          <property Id="f55f1a0c-f832-4428-bc95-7f43c238db05" name="public static decimal cost" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="23b534c9-f8bf-419e-bda0-72df94496516" />
+          </property>
+        </ownedAttributesInternal>
+        <ownedOperationsInternal>
+          <operation Id="387829aa-727a-4471-afaa-812cd6e81a02" name="public IceCube" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="c333ecdc-e046-449a-a1ff-baf02dab8b96" />
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="3f5da042-6326-41b8-8650-962e1759746f" name="GallonOfWater" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="8443cd22-6af2-44ff-8691-deeddeb5295f" />
+        <ownedAttributesInternal>
+          <property Id="7104aff5-b472-4a76-9622-410270a27d52" name="public static decimal cost" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="1dfddde0-b1c7-4665-9a6d-6b1ddb90c624" />
+          </property>
+        </ownedAttributesInternal>
+        <ownedOperationsInternal>
+          <operation Id="844a65e0-1791-4a4e-af3a-80694ec79d30" name="public GallonOfWater" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="b31c9a34-7f6b-428a-8caa-6522fadf33a9" />
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="58f65847-28ee-4295-b76e-7431adae1f5c" name="Cup" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="d4ff2519-b220-47f4-80e4-c2f629d08b42" />
+        <ownedAttributesInternal>
+          <property Id="80518690-37bc-4a84-b3df-a0ed2146f587" name="public static decimal cost" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="b9111c64-2101-49ad-b7b4-2694a59f51b6" />
+          </property>
+        </ownedAttributesInternal>
+        <ownedOperationsInternal>
+          <operation Id="2bf1f46f-a3b2-49be-9746-9e3e5e885a3e" name="public Cup" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="5268f272-139a-417a-b9bf-dc208e91f361" />
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="d9f7405b-7953-4041-be09-c348b9a1b274" name="Money" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="76e61ece-69ce-49e7-aaa7-28a0c5b8ad3b" />
+        <ownedAttributesInternal>
+          <property Id="d3b30259-feaa-40e9-8962-778664d5a333" name="decimal money" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="3afa4329-3da2-4278-846f-80a0eed41f99" />
+          </property>
+        </ownedAttributesInternal>
+        <ownedOperationsInternal>
+          <operation Id="b5d4dfc3-9f46-44b6-ac65-7ae5c7623281" name="public decimal GetMoney" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="0233ed3e-7a7a-421d-93d6-da8482d94685" />
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="44d7c43c-381d-4e71-8ee7-8fbf460ebf0f" name="IUseable" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="41447892-777a-42ae-a6cc-217757e472e5" />
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="7ac8f8f2-499a-4798-be22-5b0614c2740e" name="Day" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="dc938467-640b-404d-bf26-c3a204fb5cfe" />
+      </class>
+    </logicalClassDesignerModelHasTypes>
+  </packagedElements>
+  <package Id="69ad59a4-145b-47b3-9499-76e9d4be5f5a" name="LemonadeStandModelingProject">
+    <elementDefinition Id="fc51094f-578e-4351-a8a2-c13dd23261d5" />
+  </package>
+</logicalClassDesignerModel>

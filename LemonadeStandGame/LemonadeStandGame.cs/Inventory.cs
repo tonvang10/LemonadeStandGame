@@ -14,7 +14,7 @@ namespace LemonadeStandGame.cs
         public List<GallonOfWater> gallonsOfWater = new List<GallonOfWater>();
         public List<Cup> cups = new List<Cup>();
 
-        public void DisplaySupplies()
+        public void DisplaySupply()
         {
             ShowLemonStock();
             ShowSugarStock();

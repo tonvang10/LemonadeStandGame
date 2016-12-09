@@ -8,7 +8,6 @@ namespace LemonadeStandGame.cs
 {
     class Player
     {
-        public Customer customer;
         public Recipe recipe;
         public Inventory inventory;
         public Money money;
@@ -31,18 +30,17 @@ namespace LemonadeStandGame.cs
             money = new Money();
             recipe = new Recipe();
             inventory = new Inventory();
-            customer = new Customer();
         }
         public void MakeLemonade()
         {
-            UseLemons();
-            UseSugarCubes();
-            UseIceCubes();
-            UseGallonsOfWater();
-            UseCups();
+            UseLemon();
+            UseSugarCube();
+            UseIceCube();
+            UseGallonOfWater();
+            UseCup();
             Console.WriteLine("Good luck!\n");
         }
-        public bool UseLemons()
+        public bool UseLemon()
         {
             try
             {
@@ -52,7 +50,7 @@ namespace LemonadeStandGame.cs
             catch (Exception)
             {
                 Console.WriteLine("PLEASE ENTER A NUMBER.");
-                UseLemons();
+                UseLemon();
             }
             inventory.lemons.RemoveRange(0, lemonUsed);
             if (lemonUsed < lemonPurchased)
@@ -62,11 +60,11 @@ namespace LemonadeStandGame.cs
             else
             {
                 Console.WriteLine("Oops, you don't have enough. Please enter an amount you have.");
-                UseLemons();
+                UseLemon();
                 return true;
             }
         }
-        public bool UseSugarCubes()
+        public bool UseSugarCube()
         {
             try
             {
@@ -76,7 +74,7 @@ namespace LemonadeStandGame.cs
             catch (Exception)
             {
                 Console.WriteLine("PLEASE ENTER A NUMBER.");
-                UseSugarCubes();
+                UseSugarCube();
             }
             inventory.sugarCubes.RemoveRange(0, sugarCubeUsed);
             if (sugarCubeUsed < sugarCubePurchased)
@@ -86,11 +84,11 @@ namespace LemonadeStandGame.cs
             else
             {
                 Console.WriteLine("Oops, you don't have enough. Please enter an amount you have.");
-                UseSugarCubes();
+                UseSugarCube();
                 return false;
             }
         }
-        public bool UseIceCubes()
+        public bool UseIceCube()
         {
             try
             {
@@ -100,7 +98,7 @@ namespace LemonadeStandGame.cs
             catch (Exception)
             {
                 Console.WriteLine("PLEASE ENTER A NUMBER.");
-                UseIceCubes();
+                UseIceCube();
             }
             inventory.iceCubes.RemoveRange(0, iceCubeUsed);
             if (iceCubeUsed < iceCubePurchased)
@@ -110,11 +108,11 @@ namespace LemonadeStandGame.cs
             else
             {
                 Console.WriteLine("Oops, you don't have enough. Please enter an amount you have.");
-                UseIceCubes();
+                UseIceCube();
                 return false;
             }
         }
-        public bool UseGallonsOfWater()
+        public bool UseGallonOfWater()
         {
             try
             {
@@ -124,7 +122,7 @@ namespace LemonadeStandGame.cs
             catch (Exception)
             {
                 Console.WriteLine("PLEASE ENTER A NUMBER.");
-                UseGallonsOfWater();
+                UseGallonOfWater();
             }
                 inventory.gallonsOfWater.RemoveRange(0, gallonOfWaterUsed);
             if (gallonOfWaterUsed < gallonOfWaterPurchased)
@@ -134,11 +132,11 @@ namespace LemonadeStandGame.cs
             else
             {
                 Console.WriteLine("Oops, you don't have enough. Please enter an amount you have.");
-                UseGallonsOfWater();
+                UseGallonOfWater();
                 return false;
             }
         }
-        public bool UseCups()
+        public bool UseCup()
         {
             try
             {
@@ -148,7 +146,7 @@ namespace LemonadeStandGame.cs
             catch (Exception)
             {
                 Console.WriteLine("PLEASE ENTER A NUMBER.");
-                UseCups();
+                UseCup();
             }
             inventory.cups.RemoveRange(0, cupUsed);
             if (cupUsed < cupPurchased)
@@ -158,7 +156,7 @@ namespace LemonadeStandGame.cs
             else
             {
                 Console.WriteLine("Oops, you don't have enough. Please enter an amount you have.");
-                UseCups();
+                UseCup();
                 return false;
             }
         }
@@ -166,18 +164,18 @@ namespace LemonadeStandGame.cs
         {
             Console.WriteLine("Your money: {0} \n", money.GetMoney());
         }
-        public void BuyIngridients()
+        public void BuyIngridient()
         {
-            BuyLemons();
-            BuySugarCubes();
-            BuyIceCubes();
-            BuyGallonsOfWater();
-            BuyCups();
+            BuyLemon();
+            BuySugarCube();
+            BuyIceCube();
+            BuyGallonOfWater();
+            BuyCup();
             Console.ForegroundColor = ConsoleColor.Yellow;
             Console.WriteLine("Great, let's make lemonade.\n");
             Console.ResetColor();
         }
-        public bool BuyLemons()
+        public bool BuyLemon()
         {
             try
             {
@@ -187,7 +185,7 @@ namespace LemonadeStandGame.cs
             catch (Exception)
             {
                 Console.WriteLine("PLEASE ENTER A NUMBER.");
-                BuyLemons();
+                BuyLemon();
             }
             for (decimal i = 0; i < lemonPurchased; i++)
                 {
@@ -202,11 +200,11 @@ namespace LemonadeStandGame.cs
                 else
                 {
                 Console.WriteLine("Oops, you don't have enough money.\n");
-                BuyLemons();
+                BuyLemon();
                 return false;
                 }
         }
-        public bool BuySugarCubes()
+        public bool BuySugarCube()
         {
             try
             {
@@ -216,7 +214,7 @@ namespace LemonadeStandGame.cs
             catch (Exception)
             {
                 Console.WriteLine("PLEASE ENTER A NUMBER.");
-                BuySugarCubes();
+                BuySugarCube();
             }
             for (decimal i = 0; i < sugarCubePurchased; i++)
                 {
@@ -231,11 +229,11 @@ namespace LemonadeStandGame.cs
                 else
                 {
                 Console.WriteLine("Oops, you don't have enough money.\n");
-                BuySugarCubes();
+                BuySugarCube();
                 return false;
                 }
         }
-        public bool BuyIceCubes()
+        public bool BuyIceCube()
         {
             try
             {
@@ -245,7 +243,7 @@ namespace LemonadeStandGame.cs
             catch (Exception)
             {
                 Console.WriteLine("PLEASE ENTER A NUMBER.");
-                BuyIceCubes();
+                BuyIceCube();
             }
             for (decimal i = 0; i < iceCubePurchased; i++)
                 {
@@ -260,11 +258,11 @@ namespace LemonadeStandGame.cs
                 else
                 {
                 Console.WriteLine("Oops, you don't have enough money.\n");
-                BuyIceCubes();
+                BuyIceCube();
                 return false;
                 }
         }
-        public bool BuyGallonsOfWater()
+        public bool BuyGallonOfWater()
         {
             try
             {
@@ -274,7 +272,7 @@ namespace LemonadeStandGame.cs
             catch (Exception)
             {
                 Console.WriteLine("PLEASE ENTER A NUMBER.");
-                BuyGallonsOfWater();
+                BuyGallonOfWater();
             }
             for (decimal i = 0; i < gallonOfWaterPurchased; i++)
                 {                           
@@ -289,11 +287,11 @@ namespace LemonadeStandGame.cs
                 else
                 {
                 Console.WriteLine("Oops, you don't have enough money.\n");
-                BuyGallonsOfWater();
+                BuyGallonOfWater();
                 return false;
                 }         
         }
-        public bool BuyCups()
+        public bool BuyCup()
         {
             try
             {
@@ -303,7 +301,7 @@ namespace LemonadeStandGame.cs
             catch (Exception)
             {
                 Console.WriteLine("PLEASE ENTER A NUMBER.");
-                BuyCups();
+                BuyCup();
             }
             for (decimal i = 0; i < cupPurchased; i++)
                 {
@@ -318,7 +316,7 @@ namespace LemonadeStandGame.cs
                 else
                 {
                 Console.WriteLine("Oops, you don't have enough money.\n");
-                BuyCups();
+                BuyCup();
                 return false;
                 }
         }

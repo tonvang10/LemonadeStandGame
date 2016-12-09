@@ -1,0 +1,840 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<modelStoreModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner"
+  dslVersion="1.0.0.0"
+  Id="fc51094f-578e-4351-a8a2-c13dd23261d5"
+  name="LemonadeStandModelingProject" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
+  <profileInstances>
+    <packageHasProfileInstances
+      Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b">
+      <profileInstance
+        Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791"
+        name="StandardProfileL2" />
+    </packageHasProfileInstances>
+    <packageHasProfileInstances
+      Id="29349502-908c-4fda-9054-c48619c59ed0">
+      <profileInstance
+        Id="532ea607-fb19-44b8-8502-3351b05452be"
+        name="StandardProfileL3" />
+    </packageHasProfileInstances>
+  </profileInstances>
+  <packagedElements>
+    <packageHasNamedElement>
+      <class
+        Id="35e14de7-4693-42b6-8273-17e82de58607"
+        name="Game"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <suppliersInternal>
+          <dependency
+            Id="e8f50486-2c13-427d-b468-c0db3413c76f">
+            <classMoniker
+              Id="1859b9fe-4e71-4187-848d-b195437009d7"
+              LastKnownName="Weather"
+              LastKnownLocation="LemonadeStandModelingProject.uml" />
+          </dependency>
+          <dependency
+            Id="b04c4ed0-5f46-45b5-814e-19a18923592b">
+            <classMoniker
+              Id="64d32b28-17a4-4455-a615-a7f93052f61f"
+              LastKnownName="Store"
+              LastKnownLocation="LemonadeStandModelingProject.uml" />
+          </dependency>
+          <dependency
+            Id="eebf7fff-aee8-4743-8ac4-7dba500020fb">
+            <classMoniker
+              Id="5765e988-e055-48b8-8651-321537a55d90"
+              LastKnownName="Player"
+              LastKnownLocation="LemonadeStandModelingProject.uml" />
+          </dependency>
+        </suppliersInternal>
+        <ownedOperationsInternal>
+          <operation
+            Id="eaf70b26-ec63-4b3c-8511-0c021d9f014f"
+            name="public Game"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+          <operation
+            Id="90453e7f-3b45-4734-b0ac-f3a5b422d5ea"
+            name="public void StartGame"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+          <operation
+            Id="178b8646-b751-4e7a-9ae8-7f37100ab905"
+            name="public void AddCustomers"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+          <operation
+            Id="8f3d1f01-6d0b-45c0-82fc-03be58df6b2f"
+            name="public void GetStartingBalance"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+          <operation
+            Id="230778c0-ef07-44fe-b5b4-f3c9a1aef04e"
+            name="public void Welcome"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+          <operation
+            Id="6af9d420-ba5a-4b18-8b26-afbc3571b3cc"
+            name="public void ShowInstructions"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+        </ownedOperationsInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="5765e988-e055-48b8-8651-321537a55d90"
+        name="Player"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <suppliersInternal>
+          <dependency
+            Id="8d0c91ca-3b06-418e-9c51-db92b79e85de">
+            <classMoniker
+              Id="65987389-6b43-4d08-bd47-0d593d08d136"
+              LastKnownName="Recipe"
+              LastKnownLocation="LemonadeStandModelingProject.uml" />
+          </dependency>
+          <dependency
+            Id="c212895a-8e5a-404d-a8d8-8d7ccb884510">
+            <classMoniker
+              Id="7218d729-aed0-44d4-9f57-4892df0fd786"
+              LastKnownName="Inventory"
+              LastKnownLocation="LemonadeStandModelingProject.uml" />
+          </dependency>
+          <dependency
+            Id="c17dcfc7-9fca-464b-9fda-1949baf9682e">
+            <classMoniker
+              Id="76e61ece-69ce-49e7-aaa7-28a0c5b8ad3b"
+              LastKnownName="Money"
+              LastKnownLocation="LemonadeStandModelingProject.uml" />
+          </dependency>
+        </suppliersInternal>
+        <ownedAttributesInternal>
+          <property
+            Id="60fdafe1-0295-432c-882f-9a4798eb23f4"
+            name="int lemonUsed"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+          <property
+            Id="a920395a-1d4d-4770-ac2a-5b9492cc54aa"
+            name="int sugarCubeUsed"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+          <property
+            Id="1fcbb55c-ccbe-44e3-ad0e-813085260c77"
+            name="int iceCubeUsed"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+          <property
+            Id="d57ac39e-c6ee-4cad-a5ba-1316282e38e5"
+            name="int gallonOfWaterUsed"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+          <property
+            Id="64f68d1a-0cc7-4799-809a-403f08a895ea"
+            name="int cupUsed"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+          <property
+            Id="334d5367-0854-49b3-9f4c-f9dc48fbf3d5"
+            name="int lemonPurchased"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+          <property
+            Id="e9504ff7-6107-4843-8339-fc807f583727"
+            name="int sugarCubePurchased"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+          <property
+            Id="83009a6f-39ca-4b38-a713-9cc4bd1ae7b7"
+            name="int iceCubePurchased"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+          <property
+            Id="ca544dc0-0779-40d8-b2fe-abe45e9e2a3e"
+            name="int gallonOfWaterPurchased"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+          <property
+            Id="3e1750a2-4dba-4e0a-814e-e4494e40746d"
+            name="int cupPurchased"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+          <property
+            Id="d33efacb-4033-4548-a57e-e42105f79b32"
+            name="decimal balanceOfMoney"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+          <property
+            Id="a83717c3-f4ba-44f9-b06b-ee5774efe282"
+            name="decimal remainingBalance"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+          <property
+            Id="13e8ea5f-075a-4409-8fcb-724e9a2a5f76"
+            name="int name"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+        </ownedAttributesInternal>
+        <ownedOperationsInternal>
+          <operation
+            Id="0ac24dac-ca33-4c4d-b87d-aa88469e63df"
+            name="Player"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+          <operation
+            Id="0a37689c-65b2-4dc0-a9f4-3ae5616c0291"
+            name="public bool MakeLemonade"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+          <operation
+            Id="24a5017e-f1f4-46c8-ace0-fcb159c8e24a"
+            name="public bool UseLemon"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+          <operation
+            Id="ee762dcd-1b30-48dd-aabb-bfacc3719131"
+            name="public bool UseSugarCube"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+          <operation
+            Id="f2ac2d2e-1bd7-4acd-8ae6-e6ee861355f7"
+            name="public bool UseIceCube"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+          <operation
+            Id="25eb759f-7786-4417-bf50-c852b6aad856"
+            name="public bool UseGallonOfWater"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+          <operation
+            Id="4ea07e83-2c2b-4ba4-934b-1d3441844300"
+            name="public bool UseCup"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+          <operation
+            Id="07253b04-4b5e-4b46-bb3b-d146f1bc0a06"
+            name="public void ShowMoney"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+          <operation
+            Id="55f06ce6-665f-4cc6-a3b7-539f36dde635"
+            name="public void BuyIngridients"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+          <operation
+            Id="fc17d192-0821-4517-b62e-dabaa87a8c96"
+            name="public bool BuyLemon"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+          <operation
+            Id="b5202256-8d7e-429a-9fa4-b594c99c2eff"
+            name="public bool BuySugarCube"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+          <operation
+            Id="43778ac9-c283-4eed-9624-8f9d3a394138"
+            name="public bool BuyIceCube"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+          <operation
+            Id="be65e221-c441-4240-a4bb-5940953b7ed3"
+            name="public bool BuyGallonOfWater"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+          <operation
+            Id="e50d9957-890b-49e4-8ab2-f19c642bae3e"
+            name="public bool BuyCup"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+          <operation
+            Id="e3315188-dfd5-4676-b978-a551a24f210f"
+            name="public void GetPlayerName"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+        </ownedOperationsInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="64d32b28-17a4-4455-a615-a7f93052f61f"
+        name="Store"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <ownedOperationsInternal>
+          <operation
+            Id="e361b690-0663-4374-9e94-f56e741e7749"
+            name="public void GoToStore"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+          <operation
+            Id="3b080b48-2428-4143-a17d-361e1a798c44"
+            name="public void ShowStorePrices"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+        </ownedOperationsInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="7218d729-aed0-44d4-9f57-4892df0fd786"
+        name="Inventory"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <suppliersInternal>
+          <dependency
+            Id="8c706737-d4aa-49c3-94f9-b65edac436f2">
+            <classMoniker
+              Id="943abea3-02fa-4aff-827f-58c46576173d"
+              LastKnownName="Lemon"
+              LastKnownLocation="LemonadeStandModelingProject.uml" />
+          </dependency>
+          <dependency
+            Id="d17c640b-8e3f-41ce-a904-beb0b3121d9e">
+            <classMoniker
+              Id="691b7a62-bf08-4d7c-a164-f7a503207dcb"
+              LastKnownName="SugarCube"
+              LastKnownLocation="LemonadeStandModelingProject.uml" />
+          </dependency>
+          <dependency
+            Id="591695b2-6b87-4648-9426-7cb463beb278">
+            <classMoniker
+              Id="4cac5a6c-925e-40d2-ae3d-1e88a908fc07"
+              LastKnownName="IceCube"
+              LastKnownLocation="LemonadeStandModelingProject.uml" />
+          </dependency>
+          <dependency
+            Id="13a0bf39-7966-4449-941f-98af8bafe724">
+            <classMoniker
+              Id="8443cd22-6af2-44ff-8691-deeddeb5295f"
+              LastKnownName="GallonOfWater"
+              LastKnownLocation="LemonadeStandModelingProject.uml" />
+          </dependency>
+          <dependency
+            Id="c0f51116-51ca-4b0f-bd67-d2f879526a0e">
+            <classMoniker
+              Id="d4ff2519-b220-47f4-80e4-c2f629d08b42"
+              LastKnownName="Cup"
+              LastKnownLocation="LemonadeStandModelingProject.uml" />
+          </dependency>
+        </suppliersInternal>
+        <ownedOperationsInternal>
+          <operation
+            Id="3c24134d-c7f6-453b-9269-ea23475f7717"
+            name="public void DisplaySupply"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+          <operation
+            Id="122ec7aa-e651-456c-9d45-e43737bbf2ba"
+            name="public void ShowLemon"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+          <operation
+            Id="f4719c07-f107-4884-b33a-c97dd886cfcb"
+            name="public void ShowSugarStock"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+          <operation
+            Id="3bbcb734-27d2-4757-9a92-3efd5fb9e212"
+            name="public void ShowIceStock"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+          <operation
+            Id="7bb78ee0-035f-4fb0-9587-f5e142d6fbaf"
+            name="public void ShowWaterStock"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+          <operation
+            Id="169d9895-6e74-4ba3-a310-cba2c32041c9"
+            name="public void ShowCup"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+        </ownedOperationsInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="65987389-6b43-4d08-bd47-0d593d08d136"
+        name="Recipe"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="a49293bb-8e66-4ee8-93d4-66ad750780a8"
+        name="Customer"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <ownedAttributesInternal>
+          <property
+            Id="eb437aa4-a9a2-4fbb-ba13-1c0c4995897e"
+            name="decimal priceOfLemonade"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+        </ownedAttributesInternal>
+        <ownedOperationsInternal>
+          <operation
+            Id="759fbf4e-f902-4bde-b26c-0621486cd024"
+            name="public decimal AskForPrice"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+        </ownedOperationsInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="1859b9fe-4e71-4187-848d-b195437009d7"
+        name="Weather"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <ownedAttributesInternal>
+          <property
+            Id="27e69467-afa4-46e4-8ca4-12ca2d746dcd"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+        </ownedAttributesInternal>
+        <ownedOperationsInternal>
+          <operation
+            Id="b2512c17-5e7b-4614-b26a-6f9f6ae14402"
+            name="public void GetWeatherCondition"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+        </ownedOperationsInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="943abea3-02fa-4aff-827f-58c46576173d"
+        name="Lemon"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <ownedAttributesInternal>
+          <property
+            Id="d189c6c0-d618-49f4-81e6-44d2de10588f"
+            name="public static decimal cost"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+        </ownedAttributesInternal>
+        <ownedOperationsInternal>
+          <operation
+            Id="e06dd1a8-ee85-4268-82e5-19196e58e009"
+            name="public Lemon"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+        </ownedOperationsInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="691b7a62-bf08-4d7c-a164-f7a503207dcb"
+        name="SugarCube"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <ownedAttributesInternal>
+          <property
+            Id="6851652d-c652-445e-b93b-6dea7c299c11"
+            name="public static decimal cost"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+        </ownedAttributesInternal>
+        <ownedOperationsInternal>
+          <operation
+            Id="5162048c-3d93-496e-872d-9aa5bad21ce5"
+            name="public SugarCube"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+        </ownedOperationsInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="4cac5a6c-925e-40d2-ae3d-1e88a908fc07"
+        name="IceCube"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <ownedAttributesInternal>
+          <property
+            Id="23b534c9-f8bf-419e-bda0-72df94496516"
+            name="public static decimal cost"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+        </ownedAttributesInternal>
+        <ownedOperationsInternal>
+          <operation
+            Id="c333ecdc-e046-449a-a1ff-baf02dab8b96"
+            name="public IceCube"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+        </ownedOperationsInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="8443cd22-6af2-44ff-8691-deeddeb5295f"
+        name="GallonOfWater"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <ownedAttributesInternal>
+          <property
+            Id="1dfddde0-b1c7-4665-9a6d-6b1ddb90c624"
+            name="public static decimal cost"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+        </ownedAttributesInternal>
+        <ownedOperationsInternal>
+          <operation
+            Id="b31c9a34-7f6b-428a-8caa-6522fadf33a9"
+            name="public GallonOfWater"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+        </ownedOperationsInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="d4ff2519-b220-47f4-80e4-c2f629d08b42"
+        name="Cup"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <ownedAttributesInternal>
+          <property
+            Id="b9111c64-2101-49ad-b7b4-2694a59f51b6"
+            name="public static decimal cost"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+        </ownedAttributesInternal>
+        <ownedOperationsInternal>
+          <operation
+            Id="5268f272-139a-417a-b9bf-dc208e91f361"
+            name="public Cup"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+        </ownedOperationsInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="76e61ece-69ce-49e7-aaa7-28a0c5b8ad3b"
+        name="Money"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <ownedAttributesInternal>
+          <property
+            Id="3afa4329-3da2-4278-846f-80a0eed41f99"
+            name="decimal money"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+        </ownedAttributesInternal>
+        <ownedOperationsInternal>
+          <operation
+            Id="0233ed3e-7a7a-421d-93d6-da8482d94685"
+            name="public decimal GetMoney"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+        </ownedOperationsInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="41447892-777a-42ae-a6cc-217757e472e5"
+        name="IUseable"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="dc938467-640b-404d-bf26-c3a204fb5cfe"
+        name="Day"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false" />
+    </packageHasNamedElement>
+  </packagedElements>
+  <primitiveType
+    Id="220a3521-e091-4221-bae9-3ef9018e845c"
+    name="Integer"
+    isAbstract="false"
+    isLeaf="false" />
+  <primitiveType
+    Id="8943dc84-709e-4f62-b15a-a3273aa6f165"
+    name="Boolean"
+    isAbstract="false"
+    isLeaf="false" />
+  <primitiveType
+    Id="59259974-6d55-42c6-b7bd-763d77ac8ef9"
+    name="String"
+    isAbstract="false"
+    isLeaf="false" />
+  <primitiveType
+    Id="3ab42e7d-4969-445a-b209-471f5cb8209c"
+    name="UnlimitedNatural"
+    isAbstract="false"
+    isLeaf="false" />
+</modelStoreModel>

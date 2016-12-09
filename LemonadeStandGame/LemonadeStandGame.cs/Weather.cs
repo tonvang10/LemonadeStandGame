@@ -8,7 +8,7 @@ namespace LemonadeStandGame.cs
 {
     class Weather
     {
-        public void PickWeatherCondition()
+        public void GetWeatherCondition()
         {
             Random temperatures = new Random();
             string[] condition = new string[8];

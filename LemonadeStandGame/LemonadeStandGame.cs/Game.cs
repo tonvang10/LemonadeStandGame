@@ -33,12 +33,12 @@ namespace LemonadeStandGame.cs
                 Console.WriteLine("DAY {0}", days);
                 Console.ResetColor();
                 Console.WriteLine("GOOD LUCK!\n");
-                weather.PickWeatherCondition();
+                weather.GetWeatherCondition();
                 store.GoToStore();
                 store.ShowStorePrices();
                 player.ShowMoney();
-                player.BuyIngridients();
-                player.inventory.DisplaySupplies();
+                player.BuyIngridient();
+                player.inventory.DisplaySupply();
                 player.MakeLemonade();
                 Console.ReadLine();
                 days++;

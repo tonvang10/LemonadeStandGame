@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace LemonadeStandGame.cs
 {
-    class Customer : Weather
+    class Customer
     {
-        decimal priceOfLemonade;  
+        decimal priceOfLemonade;
 
         public decimal AskForPrice()
         {
