@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace LemonadeStandGame.cs
 {
-    class Game
+    public class Game
     {
         List<Customer> customers = new List<Customer>();
         public Player player;

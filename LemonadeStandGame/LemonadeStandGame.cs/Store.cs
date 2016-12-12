@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace LemonadeStandGame.cs
 {
-    class Store
+    public class Store
     { 
         public void GoToStore()
         {

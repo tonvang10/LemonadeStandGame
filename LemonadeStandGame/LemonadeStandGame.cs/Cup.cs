@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace LemonadeStandGame.cs
 {
-    class Cup
+    public class Cup
     {
         public static decimal cost;
         public Cup()

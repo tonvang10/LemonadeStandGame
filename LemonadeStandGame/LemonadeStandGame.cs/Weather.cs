@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace LemonadeStandGame.cs
 {
-    class Weather
+    public class Weather
     {
         public void GetWeatherCondition()
         {

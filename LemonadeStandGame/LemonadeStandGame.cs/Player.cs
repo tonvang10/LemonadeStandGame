@@ -6,24 +6,24 @@ using System.Threading.Tasks;
 
 namespace LemonadeStandGame.cs
 {
-    class Player
+    public class Player
     {
         public Recipe recipe;
         public Inventory inventory;
         public Money money;
-        int lemonUsed;
-        int sugarCubeUsed;
-        int iceCubeUsed;
-        int gallonOfWaterUsed;
-        int cupUsed;
-        int lemonPurchased;
-        int sugarCubePurchased;
-        int iceCubePurchased;
-        int gallonOfWaterPurchased;
-        int cupPurchased;
-        decimal balanceOfMoney;
-        decimal remainingBalanceOfMoney;
-        string name;
+        public int lemonUsed;
+        public int sugarCubeUsed;
+        public int iceCubeUsed;
+        public int gallonOfWaterUsed;
+        public int cupUsed;
+        public int lemonPurchased;
+        public int sugarCubePurchased;
+        public int iceCubePurchased;
+        public int gallonOfWaterPurchased;
+        public int cupPurchased;
+        public decimal balanceOfMoney;
+        public decimal remainingBalanceOfMoney;
+        public string name;
 
         public Player()
         {
@@ -33,14 +33,20 @@ namespace LemonadeStandGame.cs
         }
         public void MakeLemonade()
         {
+            AskAmountOfLemonToUse();
             UseLemon();
+            AskAmountOfSugarcubeToUse();
             UseSugarCube();
+            AskAmountOfIceCubeToUse();
             UseIceCube();
+            AskAmountOfGallonOfWaterToUse();
             UseGallonOfWater();
+            AskAmountOfCupToUse();
             UseCup();
+            inventory.DisplaySupply();
             Console.WriteLine("Good luck!\n");
         }
-        public bool UseLemon()
+        public void AskAmountOfLemonToUse()
         {
             try
             {
@@ -52,19 +58,22 @@ namespace LemonadeStandGame.cs
                 Console.WriteLine("PLEASE ENTER A NUMBER.");
                 UseLemon();
             }
+        }
+        public bool UseLemon()
+        {
             inventory.lemons.RemoveRange(0, lemonUsed);
             if (lemonUsed < lemonPurchased)
             {
-                return false;
+                return true;
             }
             else
             {
                 Console.WriteLine("Oops, you don't have enough. Please enter an amount you have.");
                 UseLemon();
-                return true;
+                return false;
             }
         }
-        public bool UseSugarCube()
+        public void AskAmountOfSugarcubeToUse()
         {
             try
             {
@@ -76,6 +85,9 @@ namespace LemonadeStandGame.cs
                 Console.WriteLine("PLEASE ENTER A NUMBER.");
                 UseSugarCube();
             }
+        }
+        public bool UseSugarCube()
+        {
             inventory.sugarCubes.RemoveRange(0, sugarCubeUsed);
             if (sugarCubeUsed < sugarCubePurchased)
             {
@@ -88,7 +100,7 @@ namespace LemonadeStandGame.cs
                 return false;
             }
         }
-        public bool UseIceCube()
+        public void AskAmountOfIceCubeToUse()
         {
             try
             {
@@ -100,6 +112,9 @@ namespace LemonadeStandGame.cs
                 Console.WriteLine("PLEASE ENTER A NUMBER.");
                 UseIceCube();
             }
+        }
+        public bool UseIceCube()
+        {
             inventory.iceCubes.RemoveRange(0, iceCubeUsed);
             if (iceCubeUsed < iceCubePurchased)
             {
@@ -112,7 +127,7 @@ namespace LemonadeStandGame.cs
                 return false;
             }
         }
-        public bool UseGallonOfWater()
+        public void AskAmountOfGallonOfWaterToUse()
         {
             try
             {
@@ -124,6 +139,9 @@ namespace LemonadeStandGame.cs
                 Console.WriteLine("PLEASE ENTER A NUMBER.");
                 UseGallonOfWater();
             }
+        }
+        public bool UseGallonOfWater()
+        {
                 inventory.gallonsOfWater.RemoveRange(0, gallonOfWaterUsed);
             if (gallonOfWaterUsed < gallonOfWaterPurchased)
             {
@@ -136,7 +154,7 @@ namespace LemonadeStandGame.cs
                 return false;
             }
         }
-        public bool UseCup()
+        public void AskAmountOfCupToUse()
         {
             try
             {
@@ -148,6 +166,9 @@ namespace LemonadeStandGame.cs
                 Console.WriteLine("PLEASE ENTER A NUMBER.");
                 UseCup();
             }
+        }
+        public bool UseCup()
+        {
             inventory.cups.RemoveRange(0, cupUsed);
             if (cupUsed < cupPurchased)
             {
@@ -166,16 +187,21 @@ namespace LemonadeStandGame.cs
         }
         public void BuyIngridient()
         {
+            GetLemonToBuy();
             BuyLemon();
+            GetSugarCubeToBuy();
             BuySugarCube();
+            GetIceCubeToBuy();
             BuyIceCube();
+            GetGallonOfWaterToBuy();
             BuyGallonOfWater();
+            GetCupToBuy();
             BuyCup();
             Console.ForegroundColor = ConsoleColor.Yellow;
             Console.WriteLine("Great, let's make lemonade.\n");
             Console.ResetColor();
         }
-        public bool BuyLemon()
+        public void GetLemonToBuy()
         {
             try
             {
@@ -187,9 +213,12 @@ namespace LemonadeStandGame.cs
                 Console.WriteLine("PLEASE ENTER A NUMBER.");
                 BuyLemon();
             }
+        }
+        public bool BuyLemon()
+        {
             for (decimal i = 0; i < lemonPurchased; i++)
                 {
-                inventory.lemons.Add(new Lemon());
+                    inventory.lemons.Add(new Lemon());
                 }
             balanceOfMoney = money.GetMoney() - (lemonPurchased * Lemon.cost);
                 if (balanceOfMoney > 0)
@@ -204,7 +233,7 @@ namespace LemonadeStandGame.cs
                 return false;
                 }
         }
-        public bool BuySugarCube()
+        public void GetSugarCubeToBuy()
         {
             try
             {
@@ -216,9 +245,12 @@ namespace LemonadeStandGame.cs
                 Console.WriteLine("PLEASE ENTER A NUMBER.");
                 BuySugarCube();
             }
+        }
+        public bool BuySugarCube()
+        {
             for (decimal i = 0; i < sugarCubePurchased; i++)
                 {
-                inventory.sugarCubes.Add(new SugarCube());
+                    inventory.sugarCubes.Add(new SugarCube());
                 }
             balanceOfMoney = balanceOfMoney - (sugarCubePurchased * SugarCube.cost);
                 if (balanceOfMoney > 0)
@@ -233,7 +265,7 @@ namespace LemonadeStandGame.cs
                 return false;
                 }
         }
-        public bool BuyIceCube()
+        public void GetIceCubeToBuy()
         {
             try
             {
@@ -245,9 +277,12 @@ namespace LemonadeStandGame.cs
                 Console.WriteLine("PLEASE ENTER A NUMBER.");
                 BuyIceCube();
             }
+        }
+        public bool BuyIceCube()
+        {
             for (decimal i = 0; i < iceCubePurchased; i++)
                 {
-                inventory.iceCubes.Add(new IceCube());
+                    inventory.iceCubes.Add(new IceCube());
                 }
             balanceOfMoney = balanceOfMoney - (iceCubePurchased * IceCube.cost);
                 if (balanceOfMoney > 0)
@@ -262,7 +297,7 @@ namespace LemonadeStandGame.cs
                 return false;
                 }
         }
-        public bool BuyGallonOfWater()
+        public void GetGallonOfWaterToBuy()
         {
             try
             {
@@ -274,9 +309,12 @@ namespace LemonadeStandGame.cs
                 Console.WriteLine("PLEASE ENTER A NUMBER.");
                 BuyGallonOfWater();
             }
+        }
+        public bool BuyGallonOfWater()
+        {
             for (decimal i = 0; i < gallonOfWaterPurchased; i++)
                 {                           
-                inventory.gallonsOfWater.Add(new GallonOfWater());
+                    inventory.gallonsOfWater.Add(new GallonOfWater());
                 }
             balanceOfMoney = balanceOfMoney - (gallonOfWaterPurchased * GallonOfWater.cost);
                 if (balanceOfMoney > 0)
@@ -291,7 +329,7 @@ namespace LemonadeStandGame.cs
                 return false;
                 }         
         }
-        public bool BuyCup()
+        public void GetCupToBuy()
         {
             try
             {
@@ -303,9 +341,12 @@ namespace LemonadeStandGame.cs
                 Console.WriteLine("PLEASE ENTER A NUMBER.");
                 BuyCup();
             }
+        }
+        public bool BuyCup()
+        {
             for (decimal i = 0; i < cupPurchased; i++)
                 {
-                inventory.cups.Add(new Cup());
+                    inventory.cups.Add(new Cup());
                 }
             remainingBalanceOfMoney = balanceOfMoney - (cupPurchased * Cup.cost);
                 if (balanceOfMoney > 0)

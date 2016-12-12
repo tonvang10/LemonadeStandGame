@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace LemonadeStandGame.cs
 {
-    class Inventory
+    public class Inventory
     {
         public List<Lemon> lemons = new List<Lemon>();
         public List<SugarCube> sugarCubes = new List<SugarCube>();

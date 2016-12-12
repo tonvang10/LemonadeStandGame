@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace LemonadeStandGame.cs
 {
-    class Day
+    public class Day
     {
         public static decimal days;
         public Day()

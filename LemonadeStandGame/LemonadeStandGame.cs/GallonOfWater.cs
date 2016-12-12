@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace LemonadeStandGame.cs
 {
-    class GallonOfWater
+    public class GallonOfWater
     {
         public static decimal cost;
         public GallonOfWater()
