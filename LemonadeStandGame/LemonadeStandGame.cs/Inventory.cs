@@ -8,18 +8,23 @@ namespace LemonadeStandGame.cs
 {
     public class Inventory
     {
-        public List<Lemon> lemons = new List<Lemon>();
-        public List<SugarCube> sugarCubes = new List<SugarCube>();
-        public List<IceCube> iceCubes = new List<IceCube>();
-        public List<GallonOfWater> gallonsOfWater = new List<GallonOfWater>();
-        public List<Cup> cups = new List<Cup>();
+        public List<Lemon> lemons;
+        public List<SugarCube> sugarCubes;
+        public List<IceCube> iceCubes;
+        public List<Cup> cups;
 
+        public Inventory()
+        {
+            lemons = new List<Lemon>();
+            sugarCubes = new List<SugarCube>();
+            iceCubes = new List<IceCube>();
+            cups = new List<Cup>();
+        }
         public void DisplaySupply()
         {
             ShowLemonStock();
             ShowSugarStock();
             ShowIceStock();
-            ShowWaterStock();
             ShowCupStock();
         }
         public void ShowLemonStock()
@@ -33,10 +38,6 @@ namespace LemonadeStandGame.cs
         public void ShowIceStock()
         {
             Console.WriteLine("You have {0} ice cubes.", iceCubes.Count);
-        }
-        public void ShowWaterStock()
-        {
-            Console.WriteLine("You have {0} gallons of water.", gallonsOfWater.Count);
         }
         public void ShowCupStock()
         {

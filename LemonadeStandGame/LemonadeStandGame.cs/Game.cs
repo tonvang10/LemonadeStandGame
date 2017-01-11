@@ -9,48 +9,84 @@ namespace LemonadeStandGame.cs
 {
     public class Game
     {
-        List<Customer> customers = new List<Customer>();
-        public Player player;
-        public Store store;
-        public Weather weather;
-          
+        Player player;
+        Store store;
+        Day day;
         public Game()
         {
             player = new Player();
             store = new Store();
-            weather = new Weather();
+            day = new Day();
         }
-        public void StartGame()
+        public void Intro()
         {
             Welcome();
             ShowInstructions();
             player.GetPlayerName();
             GetStartingBalnce();
+        }
+        public void StartGame()
+        {
             int days = 1;
-                while (days < 8)
-                {
-                Console.ForegroundColor = ConsoleColor.Red;
+            while (days < 8)
+            {
+                Console.ForegroundColor = ConsoleColor.Green;
                 Console.WriteLine("DAY {0}", days);
                 Console.ResetColor();
-                Console.WriteLine("GOOD LUCK!\n");
-                weather.GetWeatherCondition();
-                store.GoToStore();
-                store.ShowStorePrices();
-                player.ShowMoney();
-                player.BuyIngridient();
+                day.weather.DisplayWeather();
+                player.GoToStore();
                 player.inventory.DisplaySupply();
+                player.BuyIngridient();
+                AskToGoToStoreAgain();
                 player.MakeLemonade();
+                player.SetPriceOfLemonade();
+                day.weather.AttractRandomCustomers();
+                player.customer.ChoiceOfBuying(day.weather);
+                player.UseCup();
+                DisplayEarnings();
                 Console.ReadLine();
                 days++;
-                }
-        }
-        public void AddCustomers()
-        {
-            Random rndcustomer = new Random();
-            for (int i = 0; i < 150; i++)
-            {
-                customers.Add(new Customer());
             }
+            AskToPlayAgain();
+        }
+        public bool AskToPlayAgain()
+        {
+            Console.WriteLine("Would you like to play again?  (y|n)");
+            string answer = Console.ReadLine().ToLower();
+            if (answer == "y")
+            {
+                Console.Clear();
+                StartGame();
+            }
+            if (answer == "n")
+            {
+                Console.WriteLine("THANKS FOR PLAYING!");
+            }
+            return false;
+        }
+        public void DisplayEarnings()
+        {
+            player.CaculateItemsBought(0);
+            player.CaculateMoneyMade(0);
+            Console.ReadLine();
+            player.CaculateProfit();
+            player.AddEarnings();
+            Console.ReadLine();
+            player.ShowMoney();
+        }
+        public bool AskToGoToStoreAgain()
+        {
+            Console.WriteLine("Do you still need supplies? Y | N");
+            string userIput = Console.ReadLine().ToLower();
+            if (userIput == "y")
+            {
+                player.BuyIngridient();
+            }
+            if (userIput == "n")
+            {
+                return false;
+            }
+            return true;
         }
         public void GetStartingBalnce()
         {

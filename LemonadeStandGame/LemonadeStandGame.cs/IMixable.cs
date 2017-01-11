@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace LemonadeStandGame.cs
 {
-    interface IUsable
+    interface IMixable
     {
+        void MixSupplies();
     }
 }

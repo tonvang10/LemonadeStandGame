@@ -10,12 +10,12 @@ namespace LemonadeStandGame.cs
     {
         static void Main(string[] args)
         {
-
             Game game = new Game();
+            game.Intro();
             game.StartGame();
-            
 
-        Console.ReadKey();
+
+            Console.ReadKey();
         }
     }
 }

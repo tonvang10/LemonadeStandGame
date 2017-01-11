@@ -4,4 +4,10 @@ C:\Users\bojin\Desktop\LemonadeStandGame\LemonadeStandGame\LemonadeStandGame.cs\
 C:\Users\bojin\Desktop\LemonadeStandGame\LemonadeStandGame\LemonadeStandGame.cs\bin\Debug\LemonadeStandGame.cs.pdb
 C:\Users\bojin\Desktop\LemonadeStandGame\LemonadeStandGame\LemonadeStandGame.cs\obj\Debug\LemonadeStandGame.cs.exe
 C:\Users\bojin\Desktop\LemonadeStandGame\LemonadeStandGame\LemonadeStandGame.cs\obj\Debug\LemonadeStandGame.cs.pdb
+C:\Users\bojin\Desktop\RedoProjects\LemonadeStandGame\LemonadeStandGame\LemonadeStandGame.cs\bin\Debug\LemonadeStandGame.cs.exe.config
+C:\Users\bojin\Desktop\RedoProjects\LemonadeStandGame\LemonadeStandGame\LemonadeStandGame.cs\obj\Debug\LemonadeStandGame.cs.exe
+C:\Users\bojin\Desktop\RedoProjects\LemonadeStandGame\LemonadeStandGame\LemonadeStandGame.cs\obj\Debug\LemonadeStandGame.cs.pdb
+C:\Users\bojin\Desktop\RedoProjects\LemonadeStandGame\LemonadeStandGame\LemonadeStandGame.cs\bin\Debug\LemonadeStandGame.cs.exe
+C:\Users\bojin\Desktop\RedoProjects\LemonadeStandGame\LemonadeStandGame\LemonadeStandGame.cs\bin\Debug\LemonadeStandGame.cs.pdb
+C:\Users\bojin\Desktop\RedoProjects\LemonadeStandGame\LemonadeStandGame\LemonadeStandGame.cs\obj\Debug\LemonadeStandGame.cs.csprojResolveAssemblyReference.cache
 C:\Users\bojin\Desktop\LemonadeStandGame\LemonadeStandGame\LemonadeStandGame.cs\obj\Debug\LemonadeStandGame.cs.csprojResolveAssemblyReference.cache

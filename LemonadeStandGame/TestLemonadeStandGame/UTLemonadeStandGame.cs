@@ -6,7 +6,7 @@ namespace TestLemonadeStandGame
 {
     [TestClass]
     public class UTLemonadeStandGame
-    { 
+    {
         [TestMethod]
         public void TestMethod4()
         {
@@ -14,12 +14,11 @@ namespace TestLemonadeStandGame
             Player player = new Player();
             Inventory inventory = new Inventory();
             player.lemonUsed = 30;
-            player.lemonPurchased = 50;
+           
             //Act
             player.UseLemon();
             //Assert
-            Assert.IsTrue(player.lemonPurchased > player.lemonUsed);
-
+            Assert.IsTrue(player.lemonUsed < Convert.ToInt32(inventory.lemons));
         }
 
         [TestMethod]
@@ -35,15 +34,15 @@ namespace TestLemonadeStandGame
             //assert
             Assert.IsTrue(player.balanceOfMoney > 0);
         }
-        [TestMethod]
-        public void TestMethod2()
-        {
+        //[TestMethod]
+        //public void TestMethod2()
+        //{
 
-        }
-        [TestMethod]
-        public void TestMethod1()
-        {
+        //}
+        //[TestMethod]
+        //public void TestMethod1()
+        //{
 
-        }    
+        //}    
     }
 }

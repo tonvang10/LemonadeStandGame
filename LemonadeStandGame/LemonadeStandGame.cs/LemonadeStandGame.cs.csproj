@@ -46,11 +46,10 @@
     <Compile Include="Cup.cs" />
     <Compile Include="Customer.cs" />
     <Compile Include="Day.cs" />
-    <Compile Include="GallonOfWater.cs" />
     <Compile Include="Game.cs" />
     <Compile Include="IceCube.cs" />
+    <Compile Include="IMixable.cs" />
     <Compile Include="Inventory.cs" />
-    <Compile Include="IUsable.cs" />
     <Compile Include="Lemon.cs" />
     <Compile Include="Money.cs" />
     <Compile Include="Player.cs" />

@@ -8,10 +8,12 @@ namespace LemonadeStandGame.cs
 {
     public class Day
     {
-        public static decimal days;
+        public Customer customer;
+        public Weather weather;
         public Day()
         {
-            days = 7M;
+            customer = new Customer();
+            weather = new Weather();
         }
     }
 }

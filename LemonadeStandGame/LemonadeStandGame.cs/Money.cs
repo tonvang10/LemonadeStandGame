@@ -8,11 +8,11 @@ namespace LemonadeStandGame.cs
 {
     public class Money
     {
-        decimal money = 20.00M;
+        public decimal money;
 
-        public decimal GetMoney()
+        public Money()
         {
-            return money;
+            money = 20.00M;
         }
     }
 }

@@ -11,7 +11,7 @@ namespace LemonadeStandGame.cs
         public static decimal cost;
         public Cup()
         {
-            cost = .05M;
+            cost = 0.05M;
         }
     }
 }
