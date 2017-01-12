@@ -11,14 +11,15 @@ namespace TestLemonadeStandGame
         public void TestMethod4()
         {
             //Arrange
+            Recipe recipe = new Recipe();
             Player player = new Player();
             Inventory inventory = new Inventory();
-            player.lemonUsed = 30;
+            recipe.lemonUsed = 30;
            
             //Act
             player.UseLemon();
             //Assert
-            Assert.IsTrue(player.lemonUsed < Convert.ToInt32(inventory.lemons));
+            Assert.IsTrue(recipe.lemonUsed < Convert.ToInt32(inventory.lemons));
         }
 
         [TestMethod]
@@ -26,13 +27,14 @@ namespace TestLemonadeStandGame
         {
             //arrange
             Player player = new Player();
+            Store store = new Store();
             Money money = new Money();
-            player.lemonPurchased = 10;
-            player.balanceOfMoney = money.GetMoney() - (player.lemonPurchased * Lemon.cost);
+            store.lemonToPurchase = 10;
+            money.money = money.money - (store.lemonToPurchase * Lemon.cost);
             //act
             player.BuyLemon();
             //assert
-            Assert.IsTrue(player.balanceOfMoney > 0);
+            Assert.IsTrue(money.money > 0);
         }
         //[TestMethod]
         //public void TestMethod2()
