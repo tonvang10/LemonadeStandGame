@@ -40,7 +40,7 @@ namespace LemonadeStandGame.cs
         public void MakeLemonade()
         {
             Console.ForegroundColor = ConsoleColor.Yellow;
-            Console.WriteLine("\nGreat, let's make lemonade.");
+            Console.WriteLine("\nGreat, let's make lemonade.\n");
             Console.ResetColor();
             recipe.AskAmountOfLemonToUse();
             UseLemon();

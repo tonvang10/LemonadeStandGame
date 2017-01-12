@@ -55,7 +55,6 @@ namespace LemonadeStandGame.cs
         }
         public void MixSupplies()
         {
-
             Console.ForegroundColor = ConsoleColor.Green;
             Console.WriteLine("\nMixing up some yummy lemonade!\n");
             Console.ReadLine();

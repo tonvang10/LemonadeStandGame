@@ -37,7 +37,7 @@ namespace LemonadeStandGame.cs
             }
             else if (weather.Temperature > 60 && weather.Temperature < 70)
             {
-                customersBuying = rndChance.Next(1, 20);
+                customersBuying = rndChance.Next(5, 20);
                 Console.WriteLine("Out of {0} customers, you sold {1} cups of lemonade.", weather.NumberOfCustomers, customersBuying);
             }
             return customersBuying;

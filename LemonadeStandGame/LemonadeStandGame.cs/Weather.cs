@@ -46,7 +46,7 @@ namespace LemonadeStandGame.cs
             }
             else if (temperature > 60 && temperature < 70)
             {
-                numberOfCustomers = random.Next(1, 20);
+                numberOfCustomers = random.Next(5, 20);
                 Console.WriteLine("Today there were {0} customers that stopped by.", numberOfCustomers);
             }
             return numberOfCustomers;
