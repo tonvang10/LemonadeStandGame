@@ -8,11 +8,11 @@ namespace LemonadeStandGame.cs
 {
     public class Day
     {
-        public Customer customer;
+        public List<Customer> customer;
         public Weather weather;
         public Day()
         {
-            customer = new Customer();
+            customer = new List<Customer>();
             weather = new Weather();
         }
     }

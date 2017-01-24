@@ -131,16 +131,16 @@ namespace LemonadeStandGame.cs
                 return false;
             }
         }
-        public bool UseCup()
+        public void UseCup()
         {
             if (inventory.cups.Count > customer.CustomersBuying)
             {
                 inventory.cups.RemoveRange(0, customer.CustomersBuying);
-                return true;
             }
+            else
             {
-                Console.WriteLine("You ran out of cups.");
-                return true;
+                Console.WriteLine("You ran out of cups. Had to borrow some cups from a neighbor.");
+                inventory.cups.Clear();
             }
         }
         public bool BuyLemon()
