@@ -143,9 +143,11 @@ namespace LemonadeStandGame.cs
                 inventory.cups.Clear();
             }
         }
-        public bool BuyLemon()
+        public void BuyLemon()
         {
-            if (money.money > store.lemonToPurchase * Lemon.cost)
+            Lemon lemon = new Lemon();
+            decimal lemonCost = store.lemonToPurchase * Lemon.cost;
+            if (lemonCost < money.money)
             {
                 for (decimal i = 0; i < store.lemonToPurchase; i++)
                 {
@@ -153,17 +155,16 @@ namespace LemonadeStandGame.cs
                 }
                 money.money = money.money - (store.lemonToPurchase * Lemon.cost);
                 Console.WriteLine("You have {0} left to spend.\n", money.money);
-                return true;
             }
             else
             {
                 Console.WriteLine("Oops, you don't have enough money.\n");
                 ShowMoney();
                 store.AskToBuyLemon();
+                BuyLemon();
             }
-            return false;
         }
-        public bool BuySugarCube()
+        public void BuySugarCube()
         {
             if (money.money > 0)
             {
@@ -173,17 +174,16 @@ namespace LemonadeStandGame.cs
                 }
                 money.money = money.money - (store.sugarCubeToPurchase * SugarCube.cost);
                 Console.WriteLine("You have {0} left to spend.\n", money.money);
-                return true;
             }
             else
             {
                 Console.WriteLine("Oops, you don't have enough money.\n");
                 ShowMoney();
                 store.AskToBuySugarCube();
-                return false;
+                BuySugarCube();
             }
         }
-        public bool BuyIceCube()
+        public void BuyIceCube()
         {
             if (money.money > 0)
             {
@@ -193,17 +193,16 @@ namespace LemonadeStandGame.cs
                 }
                 money.money = money.money - (store.iceCubeToPurchase * IceCube.cost);
                 Console.WriteLine("You have {0} left to spend.\n", money.money);
-                return true;
             }
             else
             {
                 Console.WriteLine("Oops, you don't have enough money.\n");
                 ShowMoney();
                 store.AskToBuyIceCube();
-                return false;
+                BuyIceCube();
             }
         }
-        public bool BuyCup()
+        public void BuyCup()
         {
             if (money.money > 0)
             {
@@ -213,15 +212,13 @@ namespace LemonadeStandGame.cs
                 }
                 money.money = money.money - (store.cupToPurchase * Cup.cost);
                 Console.WriteLine("You have {0} left to spend.\n", money.money);
-                return true;
             }
             else
             {
                 Console.WriteLine("Oops, you don't have enough money.\n");
                 ShowMoney();
-
                 store.AskToBuyCup();
-                return false;
+                BuyCup();
             }
         }
         public void ShowMoney()
