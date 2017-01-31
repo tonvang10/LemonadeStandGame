@@ -8,9 +8,11 @@ namespace LemonadeStandGame.cs
 {
     public class Customer
     {
+        List<Customer> customer;
         int customersBuying;
         public Customer()
         {
+            customer = new List<Customer>(75);
         }
         public int CustomersBuying
         {
